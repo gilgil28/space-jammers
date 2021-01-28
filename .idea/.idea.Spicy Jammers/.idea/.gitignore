@@ -1,0 +1,13 @@
+﻿# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/contentModel.xml
+/modules.xml
+/projectSettingsUpdater.xml
+/.idea.Spicy Jammers.iml
+# Datasource local storage ignored files
+/../../../../../../../:\Dev\Unity\Spicy Jammers\.idea\.idea.Spicy Jammers\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
