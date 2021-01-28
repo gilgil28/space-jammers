@@ -15,8 +15,8 @@ public class ThirdPersonCameraControl : MonoBehaviour
     private void Start()
     {
         _obstruction = _target;
-        // Cursor.visible = false;
-        // Cursor.lockState = CursorLockMode.Locked;
+         //Cursor.visible = true;
+        //Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void LateUpdate()

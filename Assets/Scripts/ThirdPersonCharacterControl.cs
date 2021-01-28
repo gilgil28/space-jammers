@@ -15,7 +15,6 @@ public class ThirdPersonCharacterControl : MonoBehaviour
         var ver = Input.GetAxis("Vertical");
         var run = Input.GetKey(KeyCode.LeftShift) ? 2 : 1;
 
-        Debug.Log(run);
         var playerMovement = new Vector3(hor, 0f, ver) * (_speed * run * Time.deltaTime);
         transform.Translate(playerMovement, Space.Self);
     }
