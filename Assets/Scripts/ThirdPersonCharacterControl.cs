@@ -26,11 +26,7 @@ public class ThirdPersonCharacterControl : MonoBehaviour
         var hor = Input.GetAxis("Horizontal");
         var ver = Input.GetAxis("Vertical");
         var run = Input.GetKey(KeyCode.LeftShift) ? 2 : 1;
-<<<<<<< HEAD
 
-        var playerMovement = new Vector3(hor, 0f, ver) * (_speed * run * Time.deltaTime);
-=======
-        
         if (_allowJump && Input.GetKeyDown(KeyCode.Space))
         {
             if (_touchingColliders > 0)
@@ -39,7 +35,6 @@ public class ThirdPersonCharacterControl : MonoBehaviour
             }
         }
         var playerMovement = new Vector3(hor, 0f, ver).normalized * (_speed * run * Time.deltaTime);
->>>>>>> c4cd7b6c0a3467f0bdadd59f4ef3c500d15ace06
         transform.Translate(playerMovement, Space.Self);
     }
 
