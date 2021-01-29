@@ -51,7 +51,8 @@ public class GrappleLook : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(mScreenCenter);
         if (Physics.Raycast(ray, out RaycastHit hit) && !mIsGrappling)
         {
-            GrappableObject grappleObject = hit.collider.gameObject.GetComponent<GrappableObject>();
+            GameObject hitCollider = hit.collider.gameObject;
+            GrappableObject grappleObject = hitCollider.GetComponent<GrappableObject>();
             if (grappleObject)
             {
                 mHandR_defaultRotation = mHandR.rotation;
@@ -59,18 +60,25 @@ public class GrappleLook : MonoBehaviour
                 
                 //if the collided object is not grappable return
                 //get landing zone for hit 
-                MeshFilter meshFilter = hit.collider.gameObject.GetComponent<MeshFilter>();
+                MeshFilter meshFilter = hitCollider.GetComponent<MeshFilter>();
 
                 Vector3 topCenter = hit.collider.bounds.center + hit.collider.bounds.extents.y * Vector3.up;
                 var grapPosition = hit.point;
                 Vector3 landingPosition = topCenter + Vector3.up * 0.15f;
+
+                //If a pre defined landing position was specified make the one that was defined
+                Vector3 predefinedLandingPoint = grappleObject.GetPredefinedLandingPoint();
+                if (predefinedLandingPoint != Vector3.zero)
+                {
+                    landingPosition = predefinedLandingPoint;
+                }
 
                 //Calculate object distance to decide of grapple is possible
                 float dist = Vector3.Distance(grapPosition, mPlayerBody.position);
 
                 if (dist < 25)
                 {
-                    mMarkedObject = hit.collider.gameObject;
+                    mMarkedObject = hitCollider;
 
                     //Mark the object as grappable
                     mMarkedObject.GetComponent<Renderer>().material.color = Color.green;
@@ -134,6 +142,20 @@ public class GrappleLook : MonoBehaviour
                                     hit.collider.gameObject.GetComponent<Rigidbody>().velocity = UnityEngine.Random.onUnitSphere * 20;
 
                                     FinishGrappling();
+                                    break;
+                                case GrappleType.Special:
+                                    Animator anim = hitCollider.GetComponent<Animator>();
+                                    if (!anim)
+                                    {
+                                        throw new Exception("Special object should always have animators");
+                                    }
+                                    anim.SetTrigger("Hit");
+
+                                    mHandL.DOScaleX(1, .5f);
+                                    mHandR.DOScaleX(1, .5f).OnComplete(() =>
+                                    {
+                                        FinishGrappling();
+                                    });
                                     break;
                             }
                         });
