@@ -49,7 +49,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 74c75bc0daf24a40a59bfab715ef754c
     GuidInternal: 
-    m_lastTime: -8585897008778378536
+    m_lastTime: -8585896530098255880
     List:
     - name: main
       guid: ee6921aa369b574896852f998bdbe7db
@@ -68,8 +68,44 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: ffc56a4868565c46a78b0f62cc25d38d
     GuidInternal: 
-    m_lastTime: -8585897008779425087
+    m_lastTime: -8585896530100185790
     List:
+    - name: Hands_pull
+      guid: 69912c6c79e0b14e8a63618415635a25
+      id: 2188826725
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Hands_pull
+        ObjectType: 3
+      Path: Default Work Unit\Hands_pull
+      maxAttenuation: 0
+      maxDuration: 1.42966
+      minDuration: 1.42966
+    - name: Play_AMB_Outside__window_
+      guid: 12f7cd6fb1f24a4780246b4ef4842dee
+      id: 2697204199
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_AMB_Outside__window_
+        ObjectType: 3
+      Path: Default Work Unit\Play_AMB_Outside__window_
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Room_tone
+      guid: 9a3b3603cac92844bb1e7821d7f44cb3
+      id: 2779585674
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Room_tone
+        ObjectType: 3
+      Path: Default Work Unit\Play_Room_tone
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: run
       guid: c561e1c830037341bb456cd44717ac52
       id: 712161704
