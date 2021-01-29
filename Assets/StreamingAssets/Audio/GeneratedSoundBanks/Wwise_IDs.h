@@ -13,7 +13,9 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID RUN = 712161704U;
+        static const AkUniqueID HANDS_PULL = 2188826725U;
+        static const AkUniqueID PLAY_AMB_OUTSIDE__WINDOW_ = 2697204199U;
+        static const AkUniqueID PLAY_ROOM_TONE = 2779585674U;
         static const AkUniqueID WALK = 2108779966U;
     } // namespace EVENTS
 

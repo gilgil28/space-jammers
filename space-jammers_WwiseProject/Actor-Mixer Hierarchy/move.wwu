@@ -30,12 +30,21 @@
 										<Value>13</Value>
 									</ValueList>
 								</Property>
+								<Property Name="InitialDelay" Type="Real64">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="Lowpass" Type="int16">
 									<ValueList>
 										<Value>3</Value>
 									</ValueList>
 								</Property>
 								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-50</Value>
+									</ValueList>
 									<ModifierList>
 										<ModifierInfo>
 											<Modifier Name="" ID="{BAB350C5-CA13-4FD5-8B4C-A9B844D827CE}">
@@ -48,6 +57,11 @@
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-13</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -59,17 +73,13 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="sqeak" ID="{458424A7-5C26-40FC-A5D0-D5D7231C4450}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>GameJamSounds\sqeak.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="36677699"/>
-									</MediaIDList>
-								</AudioFileSource>
-								<AudioFileSource Name="Drilling 1" ID="{A9EE01BC-C884-4502-9B31-10CA2DB0244D}">
-									<Language>SFX</Language>
-									<AudioFile>Drilling 1.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="211523280"/>
+										<MediaID ID="865793735"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
@@ -126,6 +136,11 @@
 						</Sound>
 						<Sound Name="Drilling 1" ID="{AC0AAF45-5C7F-426E-AE55-AB2CB35CA8A4}" ShortID="727908995">
 							<PropertyList>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
 										<ModifierInfo>
@@ -168,11 +183,6 @@
 						</Sound>
 						<Sound Name="Drilling 1_01" ID="{A0528E47-EB1E-45FC-A801-550DA983353A}" ShortID="921973074">
 							<PropertyList>
-								<Property Name="InitialDelay" Type="Real64">
-									<ValueList>
-										<Value>0.9</Value>
-									</ValueList>
-								</Property>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
@@ -198,8 +208,9 @@
 							<ChildrenList>
 								<AudioFileSource Name="Drilling 1" ID="{14FD0369-C2B5-4459-A26D-3EB7777826CA}">
 									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.15724705508789"/>
+										<Property Name="LoopBegin" Type="Real64" Value="0.886"/>
 										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimBegin" Type="Real64" Value="1.02897089429379"/>
 										<Property Name="TrimEnd" Type="Real64" Value="2.67733801689118"/>
 									</PropertyList>
 									<Language>SFX</Language>
@@ -211,6 +222,41 @@
 							</ChildrenList>
 							<ActiveSourceList>
 								<ActiveSource Name="Drilling 1" ID="{14FD0369-C2B5-4459-A26D-3EB7777826CA}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Robot Mchanical roll mono" ID="{A58FC9F7-C10A-4FD5-BFA7-D4BD10E3D4EC}" ShortID="310740458">
+							<PropertyList>
+								<Property Name="InitialDelay" Type="Real64">
+									<ValueList>
+										<Value>0.5</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{63324F8B-C0C4-47D8-B427-DE51B4DF83CD}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{75E10556-37B3-46AC-9CBA-D3966B24B001}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84637FEC-9B03-450C-8747-F7A8B753A917}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Robot Mchanical roll mono" ID="{C7AED6A2-5CC6-49AE-A56E-A31582F40C96}">
+									<Language>SFX</Language>
+									<AudioFile>Robot Mchanical roll mono.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="492420829"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Robot Mchanical roll mono" ID="{C7AED6A2-5CC6-49AE-A56E-A31582F40C96}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>

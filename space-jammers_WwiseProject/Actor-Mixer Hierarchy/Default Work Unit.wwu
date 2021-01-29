@@ -6,6 +6,100 @@
 				<Folder Name="GameJamSounds" ID="{DFE57919-29F1-4C6E-8753-3B5DA1E6A85F}" ShortID="182601129">
 					<ChildrenList>
 						<WorkUnit Name="move" ID="{0F1B466E-96DB-4B20-9E15-3FDD10BC1187}" PersistMode="Reference"/>
+						<RandomSequenceContainer Name="hands pull" ID="{7F7E4436-CDE2-4233-8189-5DC6FC454DC1}" ShortID="543232980">
+							<PropertyList>
+								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{75E10556-37B3-46AC-9CBA-D3966B24B001}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84637FEC-9B03-450C-8747-F7A8B753A917}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Robot Drag object" ID="{9DBA12B7-5C9E-4833-BF73-4CA7135FDBA5}" ShortID="1036994827">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{75E10556-37B3-46AC-9CBA-D3966B24B001}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84637FEC-9B03-450C-8747-F7A8B753A917}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Robot Drag object" ID="{98CCDEBD-1190-46D1-BA1C-EA36E8338AE4}">
+											<Language>SFX</Language>
+											<AudioFile>Robot Drag object.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="509271776"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Robot Drag object" ID="{98CCDEBD-1190-46D1-BA1C-EA36E8338AE4}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<Sound Name="AMB Outside (window)" ID="{2D20628A-216B-4C88-89B6-33FBBF7FACE4}" ShortID="436030764">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{75E10556-37B3-46AC-9CBA-D3966B24B001}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84637FEC-9B03-450C-8747-F7A8B753A917}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="AMB Outside (window)" ID="{14A3C673-C493-4713-9B1C-FC8379CC80CF}">
+									<Language>SFX</Language>
+									<AudioFile>AMB Outside (window).wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="887131215"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="AMB Outside (window)" ID="{14A3C673-C493-4713-9B1C-FC8379CC80CF}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Room tone" ID="{58D7A283-C466-4368-868D-2F33C89C3CE8}" ShortID="950662996">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{75E10556-37B3-46AC-9CBA-D3966B24B001}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84637FEC-9B03-450C-8747-F7A8B753A917}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Room tone" ID="{2700E1DC-3933-4AD9-935D-F010AF6EAB66}">
+									<Language>SFX</Language>
+									<AudioFile>Room tone.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="938459644"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Room tone" ID="{2700E1DC-3933-4AD9-935D-F010AF6EAB66}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

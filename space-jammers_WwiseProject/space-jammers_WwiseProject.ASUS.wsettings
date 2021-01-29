@@ -4,8 +4,11 @@
 		<UserProjectSettings Name="" ID="{98540C9F-D1DA-4B50-B731-DB334789A7FD}">
 			<PropertyList>
 				<Property Name="AudioFilesImporter\Path" Type="string" Value="C:\Users\ASUS\Google Drive\GameJamSounds\"/>
+				<Property Name="Event Action List\{03363B9A-C9CA-4428-BB1E-7821D7F44CB3}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{2C6547B9-7277-4DBA-996E-0A34E2107AA8}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{4DCBA66C-BF73-45D6-B4F8-90567AAA1DC9}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{6C2C9169-E079-4EB1-8A63-618415635A25}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{6FCDF712-F2B1-474A-8024-6B4EF4842DEE}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{92B63EE7-1A1B-495C-B2FF-28F6B1E6C357}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{9D6EF143-3D04-48F7-B9B8-F113C989BB95}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{A018174E-61CC-4956-8C56-54EA4442B44B}\x64_Expand States" Type="string" Value=""/>
@@ -25,9 +28,9 @@
 						<Value Platform="Windows">GeneratedSoundBanks\Windows\</Value>
 					</ValueList>
 				</Property>
-				<Property Name="GenerateSoundBanks\x64_SelectedLanguages" Type="string" Value=""/>
-				<Property Name="GenerateSoundBanks\x64_SelectedPlatforms" Type="string" Value=""/>
-				<Property Name="GenerateSoundBanks\x64_SelectedSoundBanks" Type="string" Value=""/>
+				<Property Name="GenerateSoundBanks\x64_SelectedLanguages" Type="string" Value="BvDMKA=="/>
+				<Property Name="GenerateSoundBanks\x64_SelectedPlatforms" Type="string" Value="uYFdGyufdE2fO3ebS3zhsQ=="/>
+				<Property Name="GenerateSoundBanks\x64_SelectedSoundBanks" Type="string" Value="7mkhqjabV0iWhS+Zi9vn2w=="/>
 				<Property Name="HardwareController\CurrentSession" Type="string" Value="{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}"/>
 				<Property Name="MeterView\LastObject1" Type="string" Value="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"/>
 				<Property Name="MeterView\MeterMode1" Type="int32" Value="1"/>

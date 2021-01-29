@@ -16,40 +16,52 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="273014116">
+		<SoundBank Id="3161908922" Language="SFX" Hash="3526088698">
 			<ObjectPath>\SoundBanks\Default Work Unit\main</ObjectPath>
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
 			<IncludedEvents>
-				<Event Id="712161704" Name="run" ObjectPath="\Events\Default Work Unit\run" DurationType="Infinite">
+				<Event Id="2188826725" Name="Hands_pull" ObjectPath="\Events\Default Work Unit\Hands_pull" DurationType="OneShot" DurationMin="1.429660" DurationMax="1.429660">
 					<IncludedMemoryFiles>
-						<File Id="232630646" Language="SFX">
-							<ShortName>Drilling 1.wav</ShortName>
-							<Path>SFX\Drilling 1_DF9DB476.wem</Path>
+						<File Id="509271776" Language="SFX">
+							<ShortName>Robot Drag object.wav</ShortName>
+							<Path>SFX\Robot Drag object_10C4C929.wem</Path>
 						</File>
-						<File Id="448159237" Language="SFX">
-							<ShortName>GameJamSounds\wheelturn.wav</ShortName>
-							<Path>SFX\GameJamSounds\wheelturn_03B1915B.wem</Path>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2697204199" Name="Play_AMB_Outside__window_" ObjectPath="\Events\Default Work Unit\Play_AMB_Outside__window_" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="887131215" Language="SFX">
+							<ShortName>AMB Outside (window).wav</ShortName>
+							<Path>SFX\AMB Outside (window)_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2779585674" Name="Play_Room_tone" ObjectPath="\Events\Default Work Unit\Play_Room_tone" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="938459644" Language="SFX">
+							<ShortName>Room tone.wav</ShortName>
+							<Path>SFX\Room tone_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="2108779966" Name="walk" ObjectPath="\Events\Default Work Unit\walk" DurationType="Infinite">
 					<IncludedMemoryFiles>
-						<File Id="36677699" Language="SFX">
-							<ShortName>GameJamSounds\sqeak.wav</ShortName>
-							<Path>SFX\GameJamSounds\sqeak_10C4C929.wem</Path>
-						</File>
-						<File Id="259423597" Language="SFX">
-							<ShortName>Drilling 1.wav</ShortName>
-							<Path>SFX\Drilling 1_8902755B.wem</Path>
-						</File>
 						<File Id="448159237" Language="SFX">
 							<ShortName>GameJamSounds\wheelturn.wav</ShortName>
 							<Path>SFX\GameJamSounds\wheelturn_03B1915B.wem</Path>
 						</File>
+						<File Id="492420829" Language="SFX">
+							<ShortName>Robot Mchanical roll mono.wav</ShortName>
+							<Path>SFX\Robot Mchanical roll mono_D79FB2B7.wem</Path>
+						</File>
+						<File Id="865793735" Language="SFX">
+							<ShortName>GameJamSounds\sqeak.wav</ShortName>
+							<Path>SFX\GameJamSounds\sqeak_C5579977.wem</Path>
+						</File>
 						<File Id="1041702873" Language="SFX">
 							<ShortName>Drilling 1.wav</ShortName>
-							<Path>SFX\Drilling 1_133A790F.wem</Path>
+							<Path>SFX\Drilling 1_A9E95840.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

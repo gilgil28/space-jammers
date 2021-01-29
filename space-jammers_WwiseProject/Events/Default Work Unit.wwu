@@ -33,6 +33,13 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{6EBE58BC-8E5C-48BD-A941-A35D1DB427E9}" ShortID="33465460">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Robot Mchanical roll mono" ID="{A58FC9F7-C10A-4FD5-BFA7-D4BD10E3D4EC}" WorkUnitID="{0F1B466E-96DB-4B20-9E15-3FDD10BC1187}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="run" ID="{C8E161C5-0330-4173-BB45-6CD44717AC52}">
@@ -62,6 +69,39 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="wheelturn" ID="{5CDA4200-DACA-49E3-B2C9-0DD664FD9F89}" WorkUnitID="{0F1B466E-96DB-4B20-9E15-3FDD10BC1187}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Hands_pull" ID="{6C2C9169-E079-4EB1-8A63-618415635A25}">
+					<ChildrenList>
+						<Action Name="" ID="{CE198E24-387B-4C13-A833-1DE4ACB9F757}" ShortID="970519544">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Robot Drag object" ID="{9DBA12B7-5C9E-4833-BF73-4CA7135FDBA5}" WorkUnitID="{1E0FCF6E-5848-4FEC-9188-2250F1E16C69}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_AMB_Outside__window_" ID="{6FCDF712-F2B1-474A-8024-6B4EF4842DEE}">
+					<ChildrenList>
+						<Action Name="" ID="{8BD41A7B-CFD7-480D-B103-EFE56D7F607E}" ShortID="56093888">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AMB Outside (window)" ID="{2D20628A-216B-4C88-89B6-33FBBF7FACE4}" WorkUnitID="{1E0FCF6E-5848-4FEC-9188-2250F1E16C69}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Room_tone" ID="{03363B9A-C9CA-4428-BB1E-7821D7F44CB3}">
+					<ChildrenList>
+						<Action Name="" ID="{6D10933B-D6A4-46E5-8DED-B85AA10E0E9C}" ShortID="44813427">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Room tone" ID="{58D7A283-C466-4368-868D-2F33C89C3CE8}" WorkUnitID="{1E0FCF6E-5848-4FEC-9188-2250F1E16C69}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

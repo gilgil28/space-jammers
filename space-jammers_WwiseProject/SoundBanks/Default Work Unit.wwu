@@ -4,7 +4,12 @@
 		<WorkUnit Name="Default Work Unit" ID="{C05BC774-F2DA-404A-A59B-FAB715EF754C}" PersistMode="Standalone">
 			<ChildrenList>
 				<SoundBank Name="main" ID="{AA2169EE-9B36-4857-9685-2F998BDBE7DB}">
-					<ObjectInclusionList/>
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_Room_tone" ID="{03363B9A-C9CA-4428-BB1E-7821D7F44CB3}" WorkUnitID="{486AC5FF-5668-465C-A78B-0F62CC25D38D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="walk" ID="{4DCBA66C-BF73-45D6-B4F8-90567AAA1DC9}" WorkUnitID="{486AC5FF-5668-465C-A78B-0F62CC25D38D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_AMB_Outside__window_" ID="{6FCDF712-F2B1-474A-8024-6B4EF4842DEE}" WorkUnitID="{486AC5FF-5668-465C-A78B-0F62CC25D38D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Hands_pull" ID="{6C2C9169-E079-4EB1-8A63-618415635A25}" WorkUnitID="{486AC5FF-5668-465C-A78B-0F62CC25D38D}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
