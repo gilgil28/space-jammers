@@ -1,5 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
 	41941568	Play_idle			\Default Work Unit\Play_idle	
+	827134157	Play_jumps			\Default Work Unit\Play_jumps	
 	2108779966	walk			\Default Work Unit\walk	
 	2188826725	Hands_pull			\Default Work Unit\Hands_pull	
 	2697204199	Play_AMB_Outside__window_			\Default Work Unit\Play_AMB_Outside__window_	
@@ -10,6 +11,8 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	448159237	wheelturn	C:\Users\ASUS\Documents\space-jammers\space-jammers_WwiseProject\.cache\Windows\SFX\GameJamSounds\wheelturn_DE0C5980.wem		\Actor-Mixer Hierarchy\Default Work Unit\GameJamSounds\move\walk\wheelturn		224144
 	492420829	Robot Mchanical roll mono	C:\Users\ASUS\Documents\space-jammers\space-jammers_WwiseProject\.cache\Windows\SFX\Robot Mchanical roll mono_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\GameJamSounds\move\walk\Robot Mchanical roll mono		1292992
 	509271776	Robot Drag object	C:\Users\ASUS\Documents\space-jammers\space-jammers_WwiseProject\.cache\Windows\SFX\Robot Drag object_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GameJamSounds\hands pull\Robot Drag object		252256
+	526081678	jumpwoop	C:\Users\ASUS\Documents\space-jammers\space-jammers_WwiseProject\.cache\Windows\SFX\jumpwoop_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GameJamSounds\jumps\jumps\jumpwoop		428260
+	551400266	jump_nowoop	C:\Users\ASUS\Documents\space-jammers\space-jammers_WwiseProject\.cache\Windows\SFX\jump_nowoop_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GameJamSounds\jumps\jumps\jump_nowoop		428260
 	827681397	idle woopy2	C:\Users\ASUS\Documents\space-jammers\space-jammers_WwiseProject\.cache\Windows\SFX\idle woopy2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GameJamSounds\idle\idle woopy2		224648
 	865793735	sqeak	C:\Users\ASUS\Documents\space-jammers\space-jammers_WwiseProject\.cache\Windows\SFX\GameJamSounds\sqeak_C5579977.wem		\Actor-Mixer Hierarchy\Default Work Unit\GameJamSounds\move\walk\sqeak		85056
 	887131215	AMB Outside (window)	C:\Users\ASUS\Documents\space-jammers\space-jammers_WwiseProject\.cache\Windows\SFX\AMB Outside (window)_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\GameJamSounds\AMB Outside (window)		2264436

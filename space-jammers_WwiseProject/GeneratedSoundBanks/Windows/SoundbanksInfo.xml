@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="590551209">
+		<SoundBank Id="3161908922" Language="SFX" Hash="2896221380">
 			<ObjectPath>\SoundBanks\Default Work Unit\main</ObjectPath>
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
@@ -46,6 +46,18 @@
 						<File Id="827681397" Language="SFX">
 							<ShortName>idle woopy2.wav</ShortName>
 							<Path>SFX\idle woopy2_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="827134157" Name="Play_jumps" ObjectPath="\Events\Default Work Unit\Play_jumps" DurationType="OneShot" DurationMin="2.427415" DurationMax="2.427415">
+					<IncludedMemoryFiles>
+						<File Id="526081678" Language="SFX">
+							<ShortName>jumpwoop.wav</ShortName>
+							<Path>SFX\jumpwoop_10C4C929.wem</Path>
+						</File>
+						<File Id="551400266" Language="SFX">
+							<ShortName>jump_nowoop.wav</ShortName>
+							<Path>SFX\jump_nowoop_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
