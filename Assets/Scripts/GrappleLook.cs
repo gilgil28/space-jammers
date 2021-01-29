@@ -61,11 +61,11 @@ public class GrappleLook : MonoBehaviour
                 float extent = meshFilter.mesh.bounds.extents.y;
                 float scale = hit.collider.transform.localScale.y;
 
-                Vector3 grabPosition = hit.transform.position + new Vector3( 0, extent * scale - 2, 0);
-                Vector3 landingPosition = grabPosition + Vector3.up * 4;
+                Vector3 grabPosition = hit.transform.position + new Vector3( 0, extent * scale - 2 * transform.localScale.y, 0);
+                Vector3 landingPosition = grabPosition + Vector3.up * transform.localScale.y * .15f;
 
                 //Calculate object distance to decide of grapple is possible
-                float dist = Vector3.Distance(landingPosition, mPlayerBody.position);
+                float dist = Vector3.Distance(grabPosition, mPlayerBody.position);
 
                 if (dist < 25)
                 {
@@ -133,7 +133,7 @@ public class GrappleLook : MonoBehaviour
                                     //Snap the object to the player
                                     ResetHandsScale();
 
-                                    hit.collider.gameObject.GetComponent<Rigidbody>().velocity = UnityEngine.Random.onUnitSphere * 20;
+                                    hit.collider.gameObject.GetComponent<Rigidbody>().velocity = Vector3.up * 20 + transform.right * UnityEngine.Random.Range(-5,5);
 
                                     FinishGrappling();
                                     break;
