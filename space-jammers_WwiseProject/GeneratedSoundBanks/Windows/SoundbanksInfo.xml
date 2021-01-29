@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="3526088698">
+		<SoundBank Id="3161908922" Language="SFX" Hash="590551209">
 			<ObjectPath>\SoundBanks\Default Work Unit\main</ObjectPath>
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
@@ -37,6 +37,18 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="41941568" Name="Play_idle" ObjectPath="\Events\Default Work Unit\Play_idle" DurationType="OneShot" DurationMin="1.273152" DurationMax="1.273152">
+					<IncludedMemoryFiles>
+						<File Id="208519651" Language="SFX">
+							<ShortName>idle woopy.wav</ShortName>
+							<Path>SFX\idle woopy_10C4C929.wem</Path>
+						</File>
+						<File Id="827681397" Language="SFX">
+							<ShortName>idle woopy2.wav</ShortName>
+							<Path>SFX\idle woopy2_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="2779585674" Name="Play_Room_tone" ObjectPath="\Events\Default Work Unit\Play_Room_tone" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="938459644" Language="SFX">
@@ -49,7 +61,7 @@
 					<IncludedMemoryFiles>
 						<File Id="448159237" Language="SFX">
 							<ShortName>GameJamSounds\wheelturn.wav</ShortName>
-							<Path>SFX\GameJamSounds\wheelturn_03B1915B.wem</Path>
+							<Path>SFX\GameJamSounds\wheelturn_DE0C5980.wem</Path>
 						</File>
 						<File Id="492420829" Language="SFX">
 							<ShortName>Robot Mchanical roll mono.wav</ShortName>
@@ -61,7 +73,7 @@
 						</File>
 						<File Id="1041702873" Language="SFX">
 							<ShortName>Drilling 1.wav</ShortName>
-							<Path>SFX\Drilling 1_A9E95840.wem</Path>
+							<Path>SFX\Drilling 1_F878A34F.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
