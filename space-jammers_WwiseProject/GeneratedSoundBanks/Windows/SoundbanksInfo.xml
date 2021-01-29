@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="3526088698">
+		<SoundBank Id="3161908922" Language="SFX" Hash="3201227506">
 			<ObjectPath>\SoundBanks\Default Work Unit\main</ObjectPath>
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
@@ -49,7 +49,7 @@
 					<IncludedMemoryFiles>
 						<File Id="448159237" Language="SFX">
 							<ShortName>GameJamSounds\wheelturn.wav</ShortName>
-							<Path>SFX\GameJamSounds\wheelturn_03B1915B.wem</Path>
+							<Path>SFX\GameJamSounds\wheelturn_DE0C5980.wem</Path>
 						</File>
 						<File Id="492420829" Language="SFX">
 							<ShortName>Robot Mchanical roll mono.wav</ShortName>
@@ -61,7 +61,7 @@
 						</File>
 						<File Id="1041702873" Language="SFX">
 							<ShortName>Drilling 1.wav</ShortName>
-							<Path>SFX\Drilling 1_A9E95840.wem</Path>
+							<Path>SFX\Drilling 1_CAAA9C9B.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
