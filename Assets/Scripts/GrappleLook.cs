@@ -6,10 +6,20 @@ using UnityEngine;
 
 public class GrappleLook : MonoBehaviour
 {
+    enum GrappleState
+    {
+        Idle,
+        Shot,
+        Attached
+    }
+
     private bool mIsGrappling;
     private Vector3 mScreenCenter;
 
     private GameObject mMarkedObject;
+    private Vector3 mAttachedPosition;
+
+    private GrappleState mGrappleState;
 
     [SerializeField] Transform mPlayerBody;
     [SerializeField] LineRenderer mLineRenderer;
@@ -20,6 +30,7 @@ public class GrappleLook : MonoBehaviour
         mIsGrappling = false;
         mScreenCenter =  new Vector3(Screen.width / 2, Screen.height / 2, 0); ;
         mMarkedObject = null;
+        mGrappleState = GrappleState.Idle;
     }
 
     void Update()
@@ -33,8 +44,8 @@ public class GrappleLook : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(mScreenCenter);
         if (Physics.Raycast(ray, out RaycastHit hit) && !mIsGrappling)
         {
-            GrappableObject isGrappable = hit.collider.gameObject.GetComponent<GrappableObject>();
-            if (isGrappable)
+            GrappableObject grappleObject = hit.collider.gameObject.GetComponent<GrappableObject>();
+            if (grappleObject)
             {
                 
 
@@ -68,24 +79,64 @@ public class GrappleLook : MonoBehaviour
                         mLineRenderer.SetPosition(1, mPlayerBody.position);
                         Vector3 lineEnd = mLineRenderer.GetPosition(1);
 
-                        DOTween.To(() => lineEnd, x => mLineRenderer.SetPosition(1, x), grabPosition, .5f).OnComplete(()=>
+                        mGrappleState = GrappleState.Shot;
+
+                        DOTween.To(() => lineEnd, x => mLineRenderer.SetPosition(1, x), grabPosition, .5f).OnComplete(() =>
                         {
-                            //dotween to the wanted position
-                            mPlayerBody.DOMove(landingPosition, .5f).OnComplete(() =>
+                            mIsGrappling = true;
+
+                            mGrappleState = GrappleState.Attached;
+                            mAttachedPosition = grabPosition;
+
+                            //Get grapping type
+                            GrappleType type = grappleObject.GetGrappleType();
+
+                            //Handle different types of grapple
+                            switch (type)
                             {
-                                mIsGrappling = false; ;
-                                mLineRenderer.enabled = false;
-                            });
+                                case GrappleType.None:
+                                    DOTween.To(() => lineEnd, x => mLineRenderer.SetPosition(1, x), mPlayerBody.position, .5f).OnComplete(() =>
+                                    {
+                                        mIsGrappling = false; ;
+                                        mLineRenderer.enabled = false;
+                                    });
+                                    break;
+                                case GrappleType.Heavy:
+                                    //dotween to the wanted position
+                                    mPlayerBody.DOMove(landingPosition, .5f).OnComplete(() =>
+                                    {
+                                        mIsGrappling = false; ;
+                                        mLineRenderer.enabled = false;
+                                    });
+                                    break;
+
+                                case GrappleType.Light:
+                                    //Snap the object to the player
+                                    hit.collider.gameObject.transform.DOMove(mPlayerBody.position, .5f)
+                                    .OnUpdate(()=>
+                                    {
+                                        //Update the end side of the grapple 
+                                        mAttachedPosition = hit.collider.gameObject.transform.position;
+                                    })
+                                    .OnComplete(() =>
+                                    {
+                                        mIsGrappling = false; ;
+                                        mLineRenderer.enabled = false;
+                                    });
+                                    break;
+                            }
                         });
-                        //DOTween.To(() => myFloat, x => myFloat = x, 52, 1);
 
                         
 
-                        mIsGrappling = true;
+                        
+
+                        
                     }
                 }
                 else
                 {
+                    //If the object is too far away we would like to mark it as red
                     mMarkedObject = hit.collider.gameObject;
 
                     //Mark the object as grappable
@@ -96,9 +147,11 @@ public class GrappleLook : MonoBehaviour
             }
                 
         }
-        if (mIsGrappling)
+        //This is responsoble to update the 2 sides of the grapple if it's in attached state
+        if (mIsGrappling && mGrappleState == GrappleState.Attached )
         {
             mLineRenderer.SetPosition(0, mPlayerBody.position);
+            mLineRenderer.SetPosition(1, mAttachedPosition);
         }
         
     }

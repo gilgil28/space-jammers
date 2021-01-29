@@ -7,7 +7,24 @@ using UnityEngine;
 
 namespace Assets.Scripts
 {
+
+    public enum GrappleType
+    {
+        None,
+        Light,
+        Heavy,
+        Special
+    }
+
     class GrappableObject : MonoBehaviour
     {
+        
+
+        [SerializeField] GrappleType mGrappleType;
+        
+        public GrappleType GetGrappleType()
+        {
+            return mGrappleType;
+        }
     }
 }
