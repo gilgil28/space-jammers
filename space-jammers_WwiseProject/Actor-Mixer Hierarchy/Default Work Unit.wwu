@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{1E0FCF6E-5848-4FEC-9188-2250F1E16C69}" SchemaVersion="97">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{1E0FCF6E-5848-4FEC-9188-2250F1E16C69}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="GameJamSounds" ID="{DFE57919-29F1-4C6E-8753-3B5DA1E6A85F}" ShortID="182601129">
+					<ChildrenList>
+						<WorkUnit Name="move" ID="{0F1B466E-96DB-4B20-9E15-3FDD10BC1187}" PersistMode="Reference"/>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

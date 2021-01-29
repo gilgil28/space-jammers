@@ -1,0 +1,144 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5f84dfadeb693f4385022ef59a6696a, type: 3}
+  m_Name: AkWwiseProjectData
+  m_EditorClassIdentifier: 
+  AcousticTextureWwu:
+  - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Default Work Unit
+      ObjectType: 12
+    ParentPath: Default Work Unit
+    guid: 4fdaf1b6743c1642a3054ab035ffca57
+    GuidInternal: 
+    m_lastTime: -8585897401428630987
+    List: []
+  AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Default Work Unit
+      ObjectType: 12
+    ParentPath: Default Work Unit
+    guid: ec7f6384039b0c458747f7a8b753a917
+    GuidInternal: 
+    m_lastTime: -8585897401429693246
+    List:
+    - name: Master Audio Bus
+      guid: d8a41415a61d2a41a17e75ca0c2149f3
+      id: 3803692087
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      Path: Default Work Unit\Master Audio Bus
+  BankWwu:
+  - PhysicalPath: SoundBanks\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Default Work Unit
+      ObjectType: 12
+    ParentPath: Default Work Unit
+    guid: 74c75bc0daf24a40a59bfab715ef754c
+    GuidInternal: 
+    m_lastTime: -8585897307395232427
+    List:
+    - name: main
+      guid: ee6921aa369b574896852f998bdbe7db
+      id: 3161908922
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: main
+        ObjectType: 7
+      Path: Default Work Unit\main
+  EventWwu:
+  - PhysicalPath: Events\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Default Work Unit
+      ObjectType: 12
+    ParentPath: Default Work Unit
+    guid: ffc56a4868565c46a78b0f62cc25d38d
+    GuidInternal: 
+    m_lastTime: -8585897294471961219
+    List:
+    - name: run
+      guid: c561e1c830037341bb456cd44717ac52
+      id: 712161704
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: run
+        ObjectType: 3
+      Path: Default Work Unit\run
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: walk
+      guid: 6ca6cb4d73bfd645b4f890567aaa1dc9
+      id: 2108779966
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: walk
+        ObjectType: 3
+      Path: Default Work Unit\walk
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+  RtpcWwu:
+  - PhysicalPath: Game Parameters\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Default Work Unit
+      ObjectType: 12
+    ParentPath: Default Work Unit
+    guid: 645fb2c3f5a7d8418d2a3dbb23a40fbf
+    GuidInternal: 
+    m_lastTime: -8585897401427927768
+    List: []
+  StateWwu:
+  - PhysicalPath: States\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Default Work Unit
+      ObjectType: 12
+    ParentPath: Default Work Unit
+    guid: 40ed07d01c967c4d9181d0ca21277719
+    GuidInternal: 
+    m_lastTime: -8585897401427279498
+    List: []
+  SwitchWwu:
+  - PhysicalPath: Switches\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Default Work Unit
+      ObjectType: 12
+    ParentPath: Default Work Unit
+    guid: c3d01d2f17ae1348bba10d7998491afe
+    GuidInternal: 
+    m_lastTime: -8585897401429364123
+    List: []
+  TriggerWwu:
+  - PhysicalPath: Triggers\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Default Work Unit
+      ObjectType: 12
+    ParentPath: Default Work Unit
+    guid: a287f6e329a1dc4a910b28b02fd49561
+    GuidInternal: 
+    m_lastTime: -8585897401428291887
+    List: []
+  ExpandedItems:
+  - /space-jammers_WwiseProject
+  - /space-jammers_WwiseProject/Events
+  - /space-jammers_WwiseProject/Events/Default Work Unit
+  - /space-jammers_WwiseProject/SoundBanks
+  - /space-jammers_WwiseProject/SoundBanks/Default Work Unit
+  autoPopulateEnabled: 1
+  CurrentPluginConfig: 

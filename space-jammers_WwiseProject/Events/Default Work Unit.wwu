@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{486AC5FF-5668-465C-A78B-0F62CC25D38D}" SchemaVersion="97">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{486AC5FF-5668-465C-A78B-0F62CC25D38D}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="walk" ID="{4DCBA66C-BF73-45D6-B4F8-90567AAA1DC9}">
+					<ChildrenList>
+						<Action Name="" ID="{F9C81D28-44E6-49F9-B06A-DA4B397957A1}" ShortID="57240571">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Drilling 1" ID="{AC0AAF45-5C7F-426E-AE55-AB2CB35CA8A4}" WorkUnitID="{0F1B466E-96DB-4B20-9E15-3FDD10BC1187}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{6B13DB46-005B-49C1-AB4C-0D6E0B1171D6}" ShortID="219529376">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Drilling 1_01" ID="{A0528E47-EB1E-45FC-A801-550DA983353A}" WorkUnitID="{0F1B466E-96DB-4B20-9E15-3FDD10BC1187}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{1CDA0981-6B14-4C8F-8282-76091CA92D98}" ShortID="749781342">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sqeak" ID="{3AEF0946-7B47-4202-8BBE-F1E7B7D8EA99}" WorkUnitID="{0F1B466E-96DB-4B20-9E15-3FDD10BC1187}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{712C9667-8196-44C1-B060-562768150DAB}" ShortID="887487024">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="wheelturn" ID="{0909D4D9-BB48-48F1-A28E-359C9A06CAF7}" WorkUnitID="{0F1B466E-96DB-4B20-9E15-3FDD10BC1187}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="run" ID="{C8E161C5-0330-4173-BB45-6CD44717AC52}">
+					<ChildrenList>
+						<Action Name="" ID="{A667773D-EB45-4B55-8F41-8AA17170F8A9}" ShortID="262379451">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Drilling 1" ID="{92BA7655-BB48-45BB-8DE9-A74F1E1AC5E3}" WorkUnitID="{0F1B466E-96DB-4B20-9E15-3FDD10BC1187}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{9DDB28A9-A5D2-4829-8C5B-0B50C9CC635E}" ShortID="976385871">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Drilling 1_01" ID="{55DDF14A-9288-4017-8E40-2124E44FA9AB}" WorkUnitID="{0F1B466E-96DB-4B20-9E15-3FDD10BC1187}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{33AFBB39-6446-4B72-B514-34F03301F924}" ShortID="681544282">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sqeak" ID="{EE9C8D52-F00F-43BF-B4CC-58383076454A}" WorkUnitID="{0F1B466E-96DB-4B20-9E15-3FDD10BC1187}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{2D819AEA-6FB7-4DBF-B283-5B715C90EBB4}" ShortID="542528400">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="wheelturn" ID="{5CDA4200-DACA-49E3-B2C9-0DD664FD9F89}" WorkUnitID="{0F1B466E-96DB-4B20-9E15-3FDD10BC1187}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

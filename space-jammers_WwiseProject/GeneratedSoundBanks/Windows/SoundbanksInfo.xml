@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="135">
+	<RootPaths>
+		<ProjectRoot>C:\Users\ASUS\Documents\space-jammers\space-jammers_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\ASUS\Documents\space-jammers\space-jammers_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\ASUS\Documents\space-jammers\space-jammers_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>C:\Users\ASUS\Documents\space-jammers\space-jammers_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX" Hash="4204904655">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3161908922" Language="SFX" Hash="273014116">
+			<ObjectPath>\SoundBanks\Default Work Unit\main</ObjectPath>
+			<ShortName>main</ShortName>
+			<Path>main.bnk</Path>
+			<IncludedEvents>
+				<Event Id="712161704" Name="run" ObjectPath="\Events\Default Work Unit\run" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="232630646" Language="SFX">
+							<ShortName>Drilling 1.wav</ShortName>
+							<Path>SFX\Drilling 1_DF9DB476.wem</Path>
+						</File>
+						<File Id="448159237" Language="SFX">
+							<ShortName>GameJamSounds\wheelturn.wav</ShortName>
+							<Path>SFX\GameJamSounds\wheelturn_03B1915B.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2108779966" Name="walk" ObjectPath="\Events\Default Work Unit\walk" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="36677699" Language="SFX">
+							<ShortName>GameJamSounds\sqeak.wav</ShortName>
+							<Path>SFX\GameJamSounds\sqeak_10C4C929.wem</Path>
+						</File>
+						<File Id="259423597" Language="SFX">
+							<ShortName>Drilling 1.wav</ShortName>
+							<Path>SFX\Drilling 1_8902755B.wem</Path>
+						</File>
+						<File Id="448159237" Language="SFX">
+							<ShortName>GameJamSounds\wheelturn.wav</ShortName>
+							<Path>SFX\GameJamSounds\wheelturn_03B1915B.wem</Path>
+						</File>
+						<File Id="1041702873" Language="SFX">
+							<ShortName>Drilling 1.wav</ShortName>
+							<Path>SFX\Drilling 1_133A790F.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

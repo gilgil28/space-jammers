@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{0F1B466E-96DB-4B20-9E15-3FDD10BC1187}" SchemaVersion="97" RootDocumentID="{1E0FCF6E-5848-4FEC-9188-2250F1E16C69}">
+	<AudioObjects>
+		<WorkUnit Name="move" ID="{0F1B466E-96DB-4B20-9E15-3FDD10BC1187}" OwnerID="{DFE57919-29F1-4C6E-8753-3B5DA1E6A85F}" PersistMode="Nested">
+			<ChildrenList>
+				<RandomSequenceContainer Name="walk" ID="{92680D7F-48AB-478B-B3D9-E0E4207320AA}" ShortID="641895662">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{6D48398B-CFC8-460F-AED0-D9B0FD21DD60}"/>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{75E10556-37B3-46AC-9CBA-D3966B24B001}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84637FEC-9B03-450C-8747-F7A8B753A917}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="sqeak" ID="{3AEF0946-7B47-4202-8BBE-F1E7B7D8EA99}" ShortID="403153295">
+							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>13</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{BAB350C5-CA13-4FD5-8B4C-A9B844D827CE}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="126"/>
+													<Property Name="Min" Type="Real64" Value="-126"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{75E10556-37B3-46AC-9CBA-D3966B24B001}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84637FEC-9B03-450C-8747-F7A8B753A917}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sqeak" ID="{458424A7-5C26-40FC-A5D0-D5D7231C4450}">
+									<Language>SFX</Language>
+									<AudioFile>GameJamSounds\sqeak.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="36677699"/>
+									</MediaIDList>
+								</AudioFileSource>
+								<AudioFileSource Name="Drilling 1" ID="{A9EE01BC-C884-4502-9B31-10CA2DB0244D}">
+									<Language>SFX</Language>
+									<AudioFile>Drilling 1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="211523280"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sqeak" ID="{458424A7-5C26-40FC-A5D0-D5D7231C4450}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="wheelturn" ID="{0909D4D9-BB48-48F1-A28E-359C9A06CAF7}" ShortID="55842947">
+							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>7</Value>
+									</ValueList>
+								</Property>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{573B0CCF-EB65-4180-9353-82FC0A0DCB1B}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>12</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{75E10556-37B3-46AC-9CBA-D3966B24B001}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84637FEC-9B03-450C-8747-F7A8B753A917}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="wheelturn" ID="{1C8BAE69-DF4E-4CD9-9BA6-A0730FA824D7}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0544272909569714"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="2.54058818859863"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>GameJamSounds\wheelturn.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="448159237"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="wheelturn" ID="{1C8BAE69-DF4E-4CD9-9BA6-A0730FA824D7}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Drilling 1" ID="{AC0AAF45-5C7F-426E-AE55-AB2CB35CA8A4}" ShortID="727908995">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{CB503776-1D42-4970-B8CE-520DD3CAE788}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>9</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{75E10556-37B3-46AC-9CBA-D3966B24B001}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84637FEC-9B03-450C-8747-F7A8B753A917}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Drilling 1" ID="{EE92948B-AFEB-4AFB-8226-3A5339B7942C}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0289665627793482"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0206904019852487"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.9"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Drilling 1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="259423597"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Drilling 1" ID="{EE92948B-AFEB-4AFB-8226-3A5339B7942C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Drilling 1_01" ID="{A0528E47-EB1E-45FC-A801-550DA983353A}" ShortID="921973074">
+							<PropertyList>
+								<Property Name="InitialDelay" Type="Real64">
+									<ValueList>
+										<Value>0.9</Value>
+									</ValueList>
+								</Property>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{F30882E2-35AF-4786-A82E-B93AAC1B960E}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>9</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{75E10556-37B3-46AC-9CBA-D3966B24B001}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84637FEC-9B03-450C-8747-F7A8B753A917}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Drilling 1" ID="{14FD0369-C2B5-4459-A26D-3EB7777826CA}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="1.02897089429379"/>
+										<Property Name="TrimEnd" Type="Real64" Value="2.67733801689118"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Drilling 1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1041702873"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Drilling 1" ID="{14FD0369-C2B5-4459-A26D-3EB7777826CA}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="run" ID="{CD600569-C7B1-4F3E-8800-FF29D314EF75}" ShortID="333337073">
+					<PropertyList>
+						<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{75E10556-37B3-46AC-9CBA-D3966B24B001}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84637FEC-9B03-450C-8747-F7A8B753A917}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="sqeak" ID="{EE9C8D52-F00F-43BF-B4CC-58383076454A}" ShortID="190386494">
+							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>13</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{622BA686-0161-42D2-83C5-964F59A7B828}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="126"/>
+													<Property Name="Min" Type="Real64" Value="-126"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{75E10556-37B3-46AC-9CBA-D3966B24B001}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84637FEC-9B03-450C-8747-F7A8B753A917}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sqeak" ID="{2DD4C0C7-070A-4BCB-8A0A-C918EF6AB5C1}">
+									<Language>SFX</Language>
+									<AudioFile>GameJamSounds\sqeak.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="36677699"/>
+									</MediaIDList>
+								</AudioFileSource>
+								<AudioFileSource Name="Drilling 1" ID="{05E2C022-2391-4506-BEF8-0CB041D7C936}">
+									<Language>SFX</Language>
+									<AudioFile>Drilling 1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="211523280"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sqeak" ID="{2DD4C0C7-070A-4BCB-8A0A-C918EF6AB5C1}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="wheelturn" ID="{5CDA4200-DACA-49E3-B2C9-0DD664FD9F89}" ShortID="809638876">
+							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>7</Value>
+									</ValueList>
+								</Property>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>12</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{75E10556-37B3-46AC-9CBA-D3966B24B001}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84637FEC-9B03-450C-8747-F7A8B753A917}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="wheelturn" ID="{9C2B1258-B395-42C2-A11A-3E0D8BE00206}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0544272909569714"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="2.54058818859863"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>GameJamSounds\wheelturn.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="448159237"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="wheelturn" ID="{9C2B1258-B395-42C2-A11A-3E0D8BE00206}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Drilling 1" ID="{92BA7655-BB48-45BB-8DE9-A74F1E1AC5E3}" ShortID="1005032707">
+							<PropertyList>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>9</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{75E10556-37B3-46AC-9CBA-D3966B24B001}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84637FEC-9B03-450C-8747-F7A8B753A917}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Drilling 1" ID="{148105B7-67B5-4CD7-8B56-B02CA7A3C85C}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0289665627793482"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0206904019852487"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.9"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Drilling 1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="259423597"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Drilling 1" ID="{148105B7-67B5-4CD7-8B56-B02CA7A3C85C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Drilling 1_01" ID="{55DDF14A-9288-4017-8E40-2124E44FA9AB}" ShortID="79178817">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>9</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{75E10556-37B3-46AC-9CBA-D3966B24B001}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84637FEC-9B03-450C-8747-F7A8B753A917}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Drilling 1" ID="{79C95111-F8DC-4308-94D8-3C9D7F27F2CB}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="2.72558385708418"/>
+										<Property Name="TrimEnd" Type="Real64" Value="4.72154973303375"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Drilling 1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="232630646"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Drilling 1" ID="{79C95111-F8DC-4308-94D8-3C9D7F27F2CB}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

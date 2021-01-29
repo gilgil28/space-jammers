@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="12" SoundbankVersion="135">
+	<RootPaths>
+		<ProjectRoot>C:\Users\ASUS\Documents\space-jammers\space-jammers_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\ASUS\Documents\space-jammers\space-jammers_WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\ASUS\Documents\space-jammers\space-jammers_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>C:\Users\ASUS\Documents\space-jammers\space-jammers_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX" Hash="2953616821">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3161908922" Language="SFX" Hash="1724400663">
+			<ObjectPath>\SoundBanks\Default Work Unit\main</ObjectPath>
+			<ShortName>main</ShortName>
+			<Path>main.bnk</Path>
+			<IncludedEvents>
+				<Event Id="1881795969" Name="CharacterMove" ObjectPath="\Events\Default Work Unit\CharacterMove" DurationType="OneShot" DurationMin="21.316645" DurationMax="21.316645">
+					<IncludedMemoryFiles>
+						<File Id="36677699" Language="SFX">
+							<ShortName>GameJamSounds\sqeak.wav</ShortName>
+							<Path>SFX\GameJamSounds\sqeak_10C4C929.wem</Path>
+						</File>
+						<File Id="689779633" Language="SFX">
+							<ShortName>GameJamSounds\Engine Test 1 (Speed).wav</ShortName>
+							<Path>SFX\GameJamSounds\Engine Test 1 (Speed)_10C4C929.wem</Path>
+						</File>
+						<File Id="1050402972" Language="SFX">
+							<ShortName>GameJamSounds\wheelturn.wav</ShortName>
+							<Path>SFX\GameJamSounds\wheelturn_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

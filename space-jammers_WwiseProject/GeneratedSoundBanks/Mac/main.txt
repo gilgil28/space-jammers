@@ -1,0 +1,8 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1881795969	CharacterMove			\Default Work Unit\CharacterMove	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	36677699	sqeak	C:\Users\ASUS\Documents\space-jammers\space-jammers_WwiseProject\.cache\Mac\SFX\GameJamSounds\sqeak_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GameJamSounds\sqeak		85056
+	689779633	Engine Test 1 (Speed)	C:\Users\ASUS\Documents\space-jammers\space-jammers_WwiseProject\.cache\Mac\SFX\GameJamSounds\Engine Test 1 (Speed)_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GameJamSounds\Engine Test 1 (Speed)		3760320
+	1050402972	wheelturn	C:\Users\ASUS\Documents\space-jammers\space-jammers_WwiseProject\.cache\Mac\SFX\GameJamSounds\wheelturn_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GameJamSounds\wheelturn		225344
+

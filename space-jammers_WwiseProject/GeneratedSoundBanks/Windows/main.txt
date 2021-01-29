@@ -1,0 +1,11 @@
+Event	ID	Name			Wwise Object Path	Notes
+	712161704	run			\Default Work Unit\run	
+	2108779966	walk			\Default Work Unit\walk	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	36677699	sqeak	C:\Users\ASUS\Documents\space-jammers\space-jammers_WwiseProject\.cache\Windows\SFX\GameJamSounds\sqeak_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GameJamSounds\move\walk\sqeak		85056
+	232630646	Drilling 1_01	C:\Users\ASUS\Documents\space-jammers\space-jammers_WwiseProject\.cache\Windows\SFX\Drilling 1_DF9DB476.wem		\Actor-Mixer Hierarchy\Default Work Unit\GameJamSounds\move\run\Drilling 1_01		352152
+	259423597	Drilling 1	C:\Users\ASUS\Documents\space-jammers\space-jammers_WwiseProject\.cache\Windows\SFX\Drilling 1_8902755B.wem		\Actor-Mixer Hierarchy\Default Work Unit\GameJamSounds\move\walk\Drilling 1		158824
+	448159237	wheelturn	C:\Users\ASUS\Documents\space-jammers\space-jammers_WwiseProject\.cache\Windows\SFX\GameJamSounds\wheelturn_03B1915B.wem		\Actor-Mixer Hierarchy\Default Work Unit\GameJamSounds\move\walk\wheelturn		224144
+	1041702873	Drilling 1_01	C:\Users\ASUS\Documents\space-jammers\space-jammers_WwiseProject\.cache\Windows\SFX\Drilling 1_133A790F.wem		\Actor-Mixer Hierarchy\Default Work Unit\GameJamSounds\move\walk\Drilling 1_01		290836
+
