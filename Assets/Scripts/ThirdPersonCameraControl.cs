@@ -48,12 +48,12 @@ public class ThirdPersonCameraControl : MonoBehaviour
                 _obstruction = hit.transform;
                 
                 if(Vector3.Distance(_obstruction.position, transform.position) >= 3f && Vector3.Distance(transform.position, _target.position) >= 1.5f)
-                    transform.Translate(Vector3.forward * _zoomSpeed * Time.deltaTime);
+                    transform.Translate(Vector3.forward * (_zoomSpeed * Time.deltaTime));
             }
             else
             {
                 if (Vector3.Distance(transform.position, _target.position) < 4.5f)
-                    transform.Translate(Vector3.back * _zoomSpeed * Time.deltaTime);
+                    transform.Translate(Vector3.back * (_zoomSpeed * Time.deltaTime));
             }
         }
     }
