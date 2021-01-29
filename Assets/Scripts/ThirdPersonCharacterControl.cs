@@ -12,6 +12,7 @@ public class ThirdPersonCharacterControl : MonoBehaviour
     private int _touchingColliders;
     
     private Rigidbody _rigidBody;
+    private bool _hasLight;
 
     private void Awake()
     {
@@ -25,6 +26,11 @@ public class ThirdPersonCharacterControl : MonoBehaviour
 
     private void PlayerMovement()
     {
+
+        if (Input.GetKeyDown(KeyCode.LeftAlt))
+        {
+            ActivateLight();
+        }
         var hor = Input.GetAxis("Horizontal");
         var ver = Input.GetAxis("Vertical");
         var run = Input.GetKey(KeyCode.LeftShift) ? 2 : 1;
@@ -64,6 +70,15 @@ public class ThirdPersonCharacterControl : MonoBehaviour
         velocityChange.z = Mathf.Clamp(velocityChange.z, -10, 10);
         velocityChange.y = 0;
         _rigidBody.AddForce(velocityChange, ForceMode.VelocityChange);
+    }
+
+    private void ActivateLight()
+    {
+        if (!_hasLight)
+        {
+            return;
+        }
+        //TODO turn on/off light GameObject
     }
 
     private IEnumerator ExtentArms()
