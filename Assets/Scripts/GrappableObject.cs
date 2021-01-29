@@ -22,10 +22,19 @@ namespace Assets.Scripts
         
 
         [SerializeField] GrappleType mGrappleType;
+        [SerializeField] Transform mPredefinedLandingPoint;
         
         public GrappleType GetGrappleType()
         {
             return mGrappleType;
+        }
+
+        public Vector3 GetPredefinedLandingPoint()
+        {
+            if(!mPredefinedLandingPoint)
+                return Vector3.zero;
+
+            return mPredefinedLandingPoint.position;
         }
     }
 }
