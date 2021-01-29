@@ -62,8 +62,8 @@ public class GrappleLook : MonoBehaviour
                 float extent = meshFilter.mesh.bounds.extents.y;
                 float scale = hit.collider.transform.localScale.y;
 
-                Vector3 grabPosition = hit.transform.position + new Vector3( 0, extent * scale, 0);
-                Vector3 landingPosition = grabPosition + Vector3.up * 2;
+                Vector3 grabPosition = hit.transform.position + new Vector3( 0, extent * scale - 2, 0);
+                Vector3 landingPosition = grabPosition + Vector3.up * 4;
 
                 //Calculate object distance to decide of grapple is possible
                 float dist = Vector3.Distance(landingPosition, mPlayerBody.position);
@@ -101,6 +101,7 @@ public class GrappleLook : MonoBehaviour
                             switch (type)
                             {
                                 case GrappleType.None:
+                                    mHandL.DOScaleX(1, .5f);
                                     mHandR.DOScaleX(1, .5f).OnComplete(() =>
                                     {
                                         FinishGrappling();
@@ -108,9 +109,8 @@ public class GrappleLook : MonoBehaviour
                                     break;
                                 case GrappleType.Heavy:
                                     //dotween to the wanted position
-                                    mHandR.DOScaleX(1, .5f);
-                                    mHandL.DOScaleX(1, .5f);
-                                    
+                                    ResetHandsScale();
+
                                     mPlayerBody.DOMove(landingPosition, .5f).OnComplete(() =>
                                     {
                                         FinishGrappling();
@@ -119,8 +119,11 @@ public class GrappleLook : MonoBehaviour
 
                                 case GrappleType.Light:
                                     //Snap the object to the player
-                                    mHandR.DOScaleX(1, .5f);
-                                    hit.collider.gameObject.transform.DOMove(mPlayerBody.position, .5f)
+                                    ResetHandsScale();
+
+                                    var colliderTransform = hit.collider.gameObject.transform;
+                                    var dest = mPlayerBody.position + mPlayerBody.forward * 2;
+                                    colliderTransform.DOMove(new Vector3(dest.x, colliderTransform.position.y, dest.z), .5f)
                                     .OnComplete(() =>
                                     {
                                         FinishGrappling();
@@ -129,12 +132,11 @@ public class GrappleLook : MonoBehaviour
 
                                 case GrappleType.VeryLight:
                                     //Snap the object to the player
-                                    mHandR.DOScaleX(1, .5f);
-                                    hit.collider.gameObject.transform.DOMove(mPlayerBody.position, .5f)
-                                    .OnComplete(() =>
-                                    {
-                                        FinishGrappling();
-                                    });
+                                    ResetHandsScale();
+
+                                    hit.collider.gameObject.GetComponent<Rigidbody>().velocity = UnityEngine.Random.onUnitSphere * 20;
+
+                                    FinishGrappling();
                                     break;
                             }
                         });
@@ -162,6 +164,12 @@ public class GrappleLook : MonoBehaviour
         
     }
 
+    private void ResetHandsScale()
+    {
+        mHandR.DOScaleX(1, .5f);
+        mHandL.DOScaleX(1, .5f);
+    }
+
     private void FinishGrappling()
     {
         mIsGrappling = false; ;
@@ -172,7 +180,7 @@ public class GrappleLook : MonoBehaviour
     private void RotateHandToPoint(Transform hand, Vector3 position)
     {
         Vector3 vec = hand.position - position;
-        hand.Rotate(0, Vector3.Angle(mPlayerBody.forward, vec) - 90, 0, Space.Self);
-        Debug.Log(Vector3.Angle(vec, mPlayerBody.forward));
+
+        hand.Rotate(0, Vector3.Angle(-vec, transform.forward), 0, Space.Self);
     }
 }
