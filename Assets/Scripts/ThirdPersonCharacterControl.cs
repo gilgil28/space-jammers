@@ -10,14 +10,15 @@ public class ThirdPersonCharacterControl : MonoBehaviour
     [SerializeField] private float _jumpTime = 2f;
 
     private int _touchingColliders;
-    // private Rigidbody _rigidBody;
+    
+    private Rigidbody _rigidBody;
 
-    // private void Awake()
-    // {
-    //     _rigidBody = GetComponent<Rigidbody>();
-    // }
+    private void Awake()
+    {
+        _rigidBody = GetComponent<Rigidbody>();
+    }
 
-    private void Update ()
+    private void FixedUpdate ()
     {
         PlayerMovement();
     }
@@ -32,7 +33,17 @@ public class ThirdPersonCharacterControl : MonoBehaviour
 
         var movementTrigger = GetComponent<MovementTrigger>();
 
-        if (moving)
+        if (_allowJump && Input.GetKeyDown(KeyCode.Space))
+        {
+            if (_touchingColliders > 0)
+            {
+                StartCoroutine(ExtentArms());
+                movementTrigger.Stop(); //play something else?
+                return;
+                // _rigidBody.AddForce(0, 1, 0, ForceMode.Impulse);
+            }
+        }
+        else if (moving)
         {
             movementTrigger.Trigger();
         }
@@ -40,17 +51,19 @@ public class ThirdPersonCharacterControl : MonoBehaviour
         {
             movementTrigger.Stop();
         }
-
-        if (_allowJump && Input.GetKeyDown(KeyCode.Space))
-        {
-            if (_touchingColliders > 0)
-            {
-                StartCoroutine(ExtentArms());
-                // _rigidBody.AddForce(0, _jumpForce, 0, ForceMode.Impulse);
-            }
-        }
-        var playerMovement = new Vector3(hor, 0f, ver).normalized * (_speed * run * Time.deltaTime);
-        transform.Translate(playerMovement, Space.Self);
+        
+        // Calculate how fast we should be moving
+        var targetVelocity = new Vector3(hor, 0, ver);
+        targetVelocity = transform.TransformDirection(targetVelocity);
+        targetVelocity *= _speed;
+ 
+        // Apply a force that attempts to reach our target velocity
+        var velocity = _rigidBody.velocity;
+        var velocityChange = (targetVelocity - velocity);
+        velocityChange.x = Mathf.Clamp(velocityChange.x, -10, 10);
+        velocityChange.z = Mathf.Clamp(velocityChange.z, -10, 10);
+        velocityChange.y = 0;
+        _rigidBody.AddForce(velocityChange, ForceMode.VelocityChange);
     }
 
     private IEnumerator ExtentArms()
@@ -64,7 +77,7 @@ public class ThirdPersonCharacterControl : MonoBehaviour
             transform.position = Vector3.Lerp(start, target, t/_jumpTime);
             yield return null;
         }
-        transform.position += Vector3.up * 3;
+        _rigidBody.AddForce(transform.forward * 15, ForceMode.Impulse);
     }
 
     private void OnCollisionEnter ()
