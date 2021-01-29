@@ -29,7 +29,7 @@ public class ThirdPersonCharacterControl : MonoBehaviour
         var ver = Input.GetAxis("Vertical");
         var run = Input.GetKey(KeyCode.LeftShift) ? 2 : 1;
 
-        var moving = hor > 0 || ver > 0;
+        var moving = hor != 0 || ver != 0;
 
         var movementTrigger = GetComponent<MovementTrigger>();
 
