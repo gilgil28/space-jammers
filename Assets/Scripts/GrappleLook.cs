@@ -1,5 +1,6 @@
 ﻿using Assets.Scripts;
 using DG.Tweening;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,6 +22,12 @@ public class GrappleLook : MonoBehaviour
 
     private GrappleState mGrappleState;
 
+    private Quaternion mHandR_defaultRotation;
+    private Quaternion mHandL_defaultRotation;
+
+    [SerializeField] Transform mHandR;
+    [SerializeField] Transform mHandL;
+
     [SerializeField] Transform mPlayerBody;
     [SerializeField] LineRenderer mLineRenderer;
 
@@ -28,7 +35,7 @@ public class GrappleLook : MonoBehaviour
     {
         DOTween.Init();
         mIsGrappling = false;
-        mScreenCenter =  new Vector3(Screen.width / 2, Screen.height / 2, 0); ;
+        mScreenCenter =  new Vector3(Screen.width / 2, Screen.height / 2, 0); 
         mMarkedObject = null;
         mGrappleState = GrappleState.Idle;
     }
@@ -48,9 +55,6 @@ public class GrappleLook : MonoBehaviour
             if (grappleObject)
             {
                 
-
-                Debug.Log(hit.collider.name);
-
                 //if the collided object is not grappable return
                 //get landing zone for hit 
                 MeshFilter meshFilter = hit.collider.gameObject.GetComponent<MeshFilter>();
@@ -72,16 +76,18 @@ public class GrappleLook : MonoBehaviour
                     mMarkedObject.GetComponent<Renderer>().material.color = Color.green;
 
                     //If left mouse button is pressed Initiate grapple
-                    if (Input.GetMouseButton(0))
+                    if (Input.GetMouseButtonDown(0))
                     {
-                        mLineRenderer.enabled = true;
-                        mLineRenderer.SetPosition(0, mPlayerBody.position);
-                        mLineRenderer.SetPosition(1, mPlayerBody.position);
-                        Vector3 lineEnd = mLineRenderer.GetPosition(1);
-
                         mGrappleState = GrappleState.Shot;
 
-                        DOTween.To(() => lineEnd, x => mLineRenderer.SetPosition(1, x), grabPosition, .5f).OnComplete(() =>
+                        mHandR_defaultRotation = mHandR.rotation;
+                        mHandL_defaultRotation = mHandL.rotation;
+
+                        RotateHandToPoint(mHandR, grabPosition);
+                        RotateHandToPoint(mHandL, grabPosition);
+
+                        mHandL.DOScaleX(dist, .5f);
+                        mHandR.DOScaleX(dist, .5f).OnComplete(() =>
                         {
                             mIsGrappling = true;
 
@@ -95,33 +101,39 @@ public class GrappleLook : MonoBehaviour
                             switch (type)
                             {
                                 case GrappleType.None:
-                                    DOTween.To(() => lineEnd, x => mLineRenderer.SetPosition(1, x), mPlayerBody.position, .5f).OnComplete(() =>
+                                    mHandR.DOScaleX(1, .5f).OnComplete(() =>
                                     {
-                                        mIsGrappling = false; ;
-                                        mLineRenderer.enabled = false;
+                                        FinishGrappling();
                                     });
                                     break;
                                 case GrappleType.Heavy:
                                     //dotween to the wanted position
+                                    mHandR.DOScaleX(1, .5f);
+                                    mHandL.DOScaleX(1, .5f);
+                                    
                                     mPlayerBody.DOMove(landingPosition, .5f).OnComplete(() =>
                                     {
-                                        mIsGrappling = false; ;
-                                        mLineRenderer.enabled = false;
+                                        FinishGrappling();
                                     });
                                     break;
 
                                 case GrappleType.Light:
                                     //Snap the object to the player
+                                    mHandR.DOScaleX(1, .5f);
                                     hit.collider.gameObject.transform.DOMove(mPlayerBody.position, .5f)
-                                    .OnUpdate(()=>
-                                    {
-                                        //Update the end side of the grapple 
-                                        mAttachedPosition = hit.collider.gameObject.transform.position;
-                                    })
                                     .OnComplete(() =>
                                     {
-                                        mIsGrappling = false; ;
-                                        mLineRenderer.enabled = false;
+                                        FinishGrappling();
+                                    });
+                                    break;
+
+                                case GrappleType.VeryLight:
+                                    //Snap the object to the player
+                                    mHandR.DOScaleX(1, .5f);
+                                    hit.collider.gameObject.transform.DOMove(mPlayerBody.position, .5f)
+                                    .OnComplete(() =>
+                                    {
+                                        FinishGrappling();
                                     });
                                     break;
                             }
@@ -147,12 +159,20 @@ public class GrappleLook : MonoBehaviour
             }
                 
         }
-        //This is responsoble to update the 2 sides of the grapple if it's in attached state
-        if (mIsGrappling && mGrappleState == GrappleState.Attached )
-        {
-            mLineRenderer.SetPosition(0, mPlayerBody.position);
-            mLineRenderer.SetPosition(1, mAttachedPosition);
-        }
         
+    }
+
+    private void FinishGrappling()
+    {
+        mIsGrappling = false; ;
+        mHandR.rotation = mHandR_defaultRotation;
+        mHandL.rotation = mHandL_defaultRotation;
+    }
+
+    private void RotateHandToPoint(Transform hand, Vector3 position)
+    {
+        Vector3 vec = hand.position - position;
+        hand.Rotate(0, Vector3.Angle(mPlayerBody.forward, vec) - 90, 0, Space.Self);
+        Debug.Log(Vector3.Angle(vec, mPlayerBody.forward));
     }
 }
