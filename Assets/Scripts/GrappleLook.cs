@@ -29,6 +29,7 @@ public class GrappleLook : MonoBehaviour
     [SerializeField] Transform mHandL;
 
     [SerializeField] Transform mPlayerBody;
+    private float _yAngle;
 
     private void Start()
     {
@@ -53,19 +54,19 @@ public class GrappleLook : MonoBehaviour
             GrappableObject grappleObject = hit.collider.gameObject.GetComponent<GrappableObject>();
             if (grappleObject)
             {
+                mHandR_defaultRotation = mHandR.rotation;
+                mHandL_defaultRotation = mHandL.rotation;
                 
                 //if the collided object is not grappable return
                 //get landing zone for hit 
                 MeshFilter meshFilter = hit.collider.gameObject.GetComponent<MeshFilter>();
 
-                float extent = meshFilter.mesh.bounds.extents.y;
-                float scale = hit.collider.transform.localScale.y;
-
-                Vector3 grabPosition = hit.transform.position + new Vector3( 0, extent * scale - 2, 0);
-                Vector3 landingPosition = grabPosition + Vector3.up * 4;
+                Vector3 topCenter = hit.collider.bounds.center + hit.collider.bounds.extents.y * Vector3.up;
+                var grapPosition = hit.point;
+                Vector3 landingPosition = topCenter + Vector3.up * 0.15f;
 
                 //Calculate object distance to decide of grapple is possible
-                float dist = Vector3.Distance(landingPosition, mPlayerBody.position);
+                float dist = Vector3.Distance(grapPosition, mPlayerBody.position);
 
                 if (dist < 25)
                 {
@@ -79,11 +80,8 @@ public class GrappleLook : MonoBehaviour
                     {
                         mGrappleState = GrappleState.Shot;
 
-                        mHandR_defaultRotation = mHandR.rotation;
-                        mHandL_defaultRotation = mHandL.rotation;
-
-                        RotateHandToPoint(mHandR, grabPosition);
-                        RotateHandToPoint(mHandL, grabPosition);
+                        RotateHandToPoint(mHandR, grapPosition);
+                        RotateHandToPoint(mHandL, grapPosition);
 
                         mHandL.DOScaleX(dist, .5f);
                         mHandR.DOScaleX(dist, .5f).OnComplete(() =>
@@ -91,7 +89,7 @@ public class GrappleLook : MonoBehaviour
                             mIsGrappling = true;
 
                             mGrappleState = GrappleState.Attached;
-                            mAttachedPosition = grabPosition;
+                            mAttachedPosition = topCenter;
 
                             //Get grapping type
                             GrappleType type = grappleObject.GetGrappleType();
@@ -139,12 +137,6 @@ public class GrappleLook : MonoBehaviour
                                     break;
                             }
                         });
-
-                        
-
-                        
-
-                        
                     }
                 }
                 else
@@ -155,12 +147,8 @@ public class GrappleLook : MonoBehaviour
                     //Mark the object as grappable
                     mMarkedObject.GetComponent<Renderer>().material.color = Color.red;
                 }
-
-                
             }
-                
         }
-        
     }
 
     private void ResetHandsScale()
@@ -171,15 +159,16 @@ public class GrappleLook : MonoBehaviour
 
     private void FinishGrappling()
     {
-        mIsGrappling = false; ;
-        mHandR.rotation = mHandR_defaultRotation;
-        mHandL.rotation = mHandL_defaultRotation;
+        mIsGrappling = false;
+        mHandR.Rotate(0, -_yAngle, 0, Space.Self);
+        mHandL.Rotate(0, -_yAngle, 0, Space.Self);
+        Debug.Log(mHandL_defaultRotation.eulerAngles);
     }
 
     private void RotateHandToPoint(Transform hand, Vector3 position)
     {
-        Vector3 vec = hand.position - position;
-
-        hand.Rotate(0, Vector3.Angle(-vec, transform.forward), 0, Space.Self);
+        Vector3 vec = position - hand.position;
+        _yAngle = Vector3.Angle(vec, -transform.up);
+        hand.Rotate(0, _yAngle, 0, Space.Self);
     }
 }
