@@ -29,7 +29,6 @@ public class GrappleLook : MonoBehaviour
     [SerializeField] Transform mHandL;
 
     [SerializeField] Transform mPlayerBody;
-    [SerializeField] LineRenderer mLineRenderer;
 
     private void Start()
     {
@@ -111,7 +110,7 @@ public class GrappleLook : MonoBehaviour
                                     //dotween to the wanted position
                                     ResetHandsScale();
 
-                                    mPlayerBody.DOMove(landingPosition, .5f).OnComplete(() =>
+                                    mPlayerBody.DOMove(landingPosition, .5f).SetEase(Ease.OutQuad).OnComplete(() =>
                                     {
                                         FinishGrappling();
                                     });

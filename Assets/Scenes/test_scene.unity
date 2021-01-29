@@ -827,7 +827,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 366217190, guid: 44ad6d0414f995f4cb0c2ae58540016b, type: 3}
       propertyPath: m_Mass
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1529343603, guid: 44ad6d0414f995f4cb0c2ae58540016b, type: 3}
       propertyPath: mPlayerBody
