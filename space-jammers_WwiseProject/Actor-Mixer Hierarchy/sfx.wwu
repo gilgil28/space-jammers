@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{5660110C-1AB5-45A9-821C-531FBE825695}" SchemaVersion="97" RootDocumentID="{1E0FCF6E-5848-4FEC-9188-2250F1E16C69}">
+	<AudioObjects>
+		<WorkUnit Name="sfx" ID="{5660110C-1AB5-45A9-821C-531FBE825695}" OwnerID="{DFE57919-29F1-4C6E-8753-3B5DA1E6A85F}" PersistMode="Nested">
+			<ChildrenList>
+				<Sound Name="UI - Collect" ID="{788BFBA3-723C-454A-9BFD-F69AA82E8918}" ShortID="82301376">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{75E10556-37B3-46AC-9CBA-D3966B24B001}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84637FEC-9B03-450C-8747-F7A8B753A917}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="UI - Collect" ID="{58B3CF51-BBA6-4555-B417-9AA3B77551E0}">
+							<Language>SFX</Language>
+							<AudioFile>UI - Collect.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="561703834"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="UI - Collect" ID="{58B3CF51-BBA6-4555-B417-9AA3B77551E0}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="UI - error" ID="{2485D95F-BB0D-4510-83FA-8F9705318E8E}" ShortID="465108619">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{75E10556-37B3-46AC-9CBA-D3966B24B001}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84637FEC-9B03-450C-8747-F7A8B753A917}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="UI - error" ID="{9CC5ECB3-0955-41BD-AA09-C273AA99EFFE}">
+							<Language>SFX</Language>
+							<AudioFile>UI - error.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="985073005"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="UI - error" ID="{9CC5ECB3-0955-41BD-AA09-C273AA99EFFE}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

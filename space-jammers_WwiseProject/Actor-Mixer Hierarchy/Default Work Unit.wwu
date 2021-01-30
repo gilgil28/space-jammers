@@ -230,6 +230,7 @@
 								</RandomSequenceContainer>
 							</ChildrenList>
 						</RandomSequenceContainer>
+						<WorkUnit Name="sfx" ID="{5660110C-1AB5-45A9-821C-531FBE825695}" PersistMode="Reference"/>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>
