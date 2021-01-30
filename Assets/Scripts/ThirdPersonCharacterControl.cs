@@ -10,7 +10,8 @@ public class ThirdPersonCharacterControl : MonoBehaviour
     [SerializeField] private float _jumpTime = 2f;
 
     [SerializeField] private MovementTrigger _movementTrigger;
-    [SerializeField] private HandsTrigger _handsTrigger;
+    [SerializeField] private IdleTrigger _idleTrigger;
+    [SerializeField] private JumpTrigger _jumpTrigger;
 
     private Animator _animator;
     private Animation _anim;
@@ -49,7 +50,7 @@ public class ThirdPersonCharacterControl : MonoBehaviour
             if (_touchingColliders > 0)
             {
                 _elevating = true;
-                _handsTrigger.Trigger();
+                _jumpTrigger.Trigger();
                 StartCoroutine(ExtentArms());
                 _movementTrigger.Stop();
                 return;
@@ -93,7 +94,7 @@ public class ThirdPersonCharacterControl : MonoBehaviour
             yield return null;
         }
         _rigidBody.AddForce(transform.forward * 15, ForceMode.Impulse);
-        _handsTrigger.Stop();
+        _jumpTrigger.Stop();
         _elevating = false;
     }
 
