@@ -15,6 +15,8 @@ namespace AK
     {
         static const AkUniqueID HANDS_PULL = 2188826725U;
         static const AkUniqueID PLAY_AMB_OUTSIDE__WINDOW_ = 2697204199U;
+        static const AkUniqueID PLAY_BATS_SHORT = 2355488257U;
+        static const AkUniqueID PLAY_FLASH_TOGGLE = 500080843U;
         static const AkUniqueID PLAY_IDLE = 41941568U;
         static const AkUniqueID PLAY_JUMPS = 827134157U;
         static const AkUniqueID PLAY_ROOM_TONE = 2779585674U;

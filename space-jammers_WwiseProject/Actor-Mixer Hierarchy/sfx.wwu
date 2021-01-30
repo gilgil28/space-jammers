@@ -4,6 +4,13 @@
 		<WorkUnit Name="sfx" ID="{5660110C-1AB5-45A9-821C-531FBE825695}" OwnerID="{DFE57919-29F1-4C6E-8753-3B5DA1E6A85F}" PersistMode="Nested">
 			<ChildrenList>
 				<Sound Name="UI - Collect" ID="{788BFBA3-723C-454A-9BFD-F69AA82E8918}" ShortID="82301376">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>2</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{75E10556-37B3-46AC-9CBA-D3966B24B001}"/>
@@ -26,6 +33,13 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="UI - error" ID="{2485D95F-BB0D-4510-83FA-8F9705318E8E}" ShortID="465108619">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>4</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{75E10556-37B3-46AC-9CBA-D3966B24B001}"/>

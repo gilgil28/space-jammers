@@ -1,16 +1,20 @@
 Event	ID	Name			Wwise Object Path	Notes
 	41941568	Play_idle			\Default Work Unit\Play_idle	
+	500080843	Play_flash_toggle			\Default Work Unit\Play_flash_toggle	
 	827134157	Play_jumps			\Default Work Unit\Play_jumps	
 	1416566061	Play_UI___Collect			\Default Work Unit\Play_UI___Collect	
 	2108779966	walk			\Default Work Unit\walk	
 	2188826725	Hands_pull			\Default Work Unit\Hands_pull	
+	2355488257	Play_bats_short			\Default Work Unit\Play_bats_short	
 	2697204199	Play_AMB_Outside__window_			\Default Work Unit\Play_AMB_Outside__window_	
 	2779585674	Play_Room_tone			\Default Work Unit\Play_Room_tone	
 	3622359025	Play_UI___error			\Default Work Unit\Play_UI___error	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	23732042	bats short	C:\Users\ASUS\Documents\space-jammers\space-jammers_WwiseProject\.cache\Windows\SFX\bats short_417D71D8.wem		\Actor-Mixer Hierarchy\Default Work Unit\GameJamSounds\bats short		478656
 	208519651	idle woopy	C:\Users\ASUS\Documents\space-jammers\space-jammers_WwiseProject\.cache\Windows\SFX\idle woopy_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GameJamSounds\idle\idle woopy		224648
 	448159237	wheelturn	C:\Users\ASUS\Documents\space-jammers\space-jammers_WwiseProject\.cache\Windows\SFX\GameJamSounds\wheelturn_DE0C5980.wem		\Actor-Mixer Hierarchy\Default Work Unit\GameJamSounds\move\walk\wheelturn		224144
+	483532977	flash toggle	C:\Users\ASUS\Documents\space-jammers\space-jammers_WwiseProject\.cache\Windows\SFX\flash toggle_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GameJamSounds\flash toggle		207936
 	492420829	Robot Mchanical roll mono	C:\Users\ASUS\Documents\space-jammers\space-jammers_WwiseProject\.cache\Windows\SFX\Robot Mchanical roll mono_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\GameJamSounds\move\walk\Robot Mchanical roll mono		1292992
 	509271776	Robot Drag object	C:\Users\ASUS\Documents\space-jammers\space-jammers_WwiseProject\.cache\Windows\SFX\Robot Drag object_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GameJamSounds\hands pull\Robot Drag object		252256
 	526081678	jumpwoop	C:\Users\ASUS\Documents\space-jammers\space-jammers_WwiseProject\.cache\Windows\SFX\jumpwoop_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GameJamSounds\jumps\jumps\jumpwoop		428260

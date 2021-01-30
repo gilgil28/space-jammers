@@ -9,7 +9,9 @@
 						<ObjectRef Name="Play_jumps" ID="{F36E84DF-6F94-426B-A011-B9496E217427}" WorkUnitID="{486AC5FF-5668-465C-A78B-0F62CC25D38D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Room_tone" ID="{03363B9A-C9CA-4428-BB1E-7821D7F44CB3}" WorkUnitID="{486AC5FF-5668-465C-A78B-0F62CC25D38D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="walk" ID="{4DCBA66C-BF73-45D6-B4F8-90567AAA1DC9}" WorkUnitID="{486AC5FF-5668-465C-A78B-0F62CC25D38D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_UI___error" ID="{96D6B72C-1B54-4737-B4CF-54C47001FB4A}" WorkUnitID="{486AC5FF-5668-465C-A78B-0F62CC25D38D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_AMB_Outside__window_" ID="{6FCDF712-F2B1-474A-8024-6B4EF4842DEE}" WorkUnitID="{486AC5FF-5668-465C-A78B-0F62CC25D38D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_UI___Collect" ID="{5ADFBECE-4951-4973-AF03-278B9788EDA0}" WorkUnitID="{486AC5FF-5668-465C-A78B-0F62CC25D38D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Hands_pull" ID="{6C2C9169-E079-4EB1-8A63-618415635A25}" WorkUnitID="{486AC5FF-5668-465C-A78B-0F62CC25D38D}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
