@@ -10,6 +10,7 @@ public class ThirdPersonCharacterControl : MonoBehaviour
     [SerializeField] private float _jumpTime = 2f;
 
     private Animator _animator;
+    private Animation _anim;
 
     private int _touchingColliders;
     
@@ -19,7 +20,7 @@ public class ThirdPersonCharacterControl : MonoBehaviour
     private void Awake()
     {
         _rigidBody = GetComponent<Rigidbody>();
-        _animator = GetComponent<Animator>();
+        _animator = GetComponentInChildren<Animator>();
     }
 
     private void FixedUpdate ()
@@ -29,7 +30,6 @@ public class ThirdPersonCharacterControl : MonoBehaviour
 
     private void PlayerMovement()
     {
-
         if (Input.GetKeyDown(KeyCode.LeftAlt))
         {
             ActivateLight();
@@ -37,6 +37,12 @@ public class ThirdPersonCharacterControl : MonoBehaviour
         var hor = Input.GetAxis("Horizontal");
         var ver = Input.GetAxis("Vertical");
         var run = Input.GetKey(KeyCode.LeftShift) ? 2 : 1;
+
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            _anim.clip = _anim.GetClip("startWalk");
+            _anim.Play();
+        }
 
         var moving = hor != 0 || ver != 0;
 
@@ -73,6 +79,7 @@ public class ThirdPersonCharacterControl : MonoBehaviour
         velocityChange.z = Mathf.Clamp(velocityChange.z, -10, 10);
         velocityChange.y = 0;
         _rigidBody.AddForce(velocityChange, ForceMode.VelocityChange);
+
 
         _animator.SetFloat("speed", Mathf.Abs(velocity.magnitude));
     }
