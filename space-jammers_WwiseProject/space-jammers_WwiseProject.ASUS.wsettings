@@ -7,10 +7,15 @@
 				<Property Name="Event Action List\{03363B9A-C9CA-4428-BB1E-7821D7F44CB3}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{06B70013-CD32-4A4C-AED0-F7B47202038E}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{2C6547B9-7277-4DBA-996E-0A34E2107AA8}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{2E412F8E-9BDF-4DC2-8931-E2CFC0A3802D}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{4DCBA66C-BF73-45D6-B4F8-90567AAA1DC9}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{5ADFBECE-4951-4973-AF03-278B9788EDA0}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{6C2C9169-E079-4EB1-8A63-618415635A25}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{6FCDF712-F2B1-474A-8024-6B4EF4842DEE}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{7ECD892C-9502-4094-AD07-DBC506CEBD19}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{92B63EE7-1A1B-495C-B2FF-28F6B1E6C357}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{96D6B72C-1B54-4737-B4CF-54C47001FB4A}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{96F13EC8-BAED-4349-B24C-FDCC02499F8A}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{9D6EF143-3D04-48F7-B9B8-F113C989BB95}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{A018174E-61CC-4956-8C56-54EA4442B44B}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{C8E161C5-0330-4173-BB45-6CD44717AC52}\x64_Expand States" Type="string" Value=""/>
@@ -51,6 +56,7 @@
 				<Property Name="MonitoringManager\GameObjectFilter\GameObjectFilterVersion" Type="int32" Value="1"/>
 				<Property Name="MonitoringManager\GameObjectFilter\GameObjectFiltersEnable" Type="bool" Value="True"/>
 				<Property Name="MonitoringManager\GameObjectFilter\x64_GameObjectFilters" Type="string" Value=""/>
+				<Property Name="PluginUserAcknowledge\iZotope Hybrid Reverb" Type="bool" Value="True"/>
 				<Property Name="ProjectExplorer\FirstVisible_10_1" Type="string" Value="{4C96B38B-3DB4-40C7-91C9-665510E38993}"/>
 				<Property Name="ProjectExplorer\FirstVisible_11_1" Type="string" Value="{23EC2DE3-3ED8-4B82-AC99-92E25F2E4C6B}"/>
 				<Property Name="ProjectExplorer\FirstVisible_1_1" Type="string" Value="{2388DAEA-9775-46C6-A2ED-C5222A397756}"/>

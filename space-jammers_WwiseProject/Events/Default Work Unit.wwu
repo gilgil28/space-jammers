@@ -122,6 +122,50 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_UI___Collect" ID="{5ADFBECE-4951-4973-AF03-278B9788EDA0}">
+					<ChildrenList>
+						<Action Name="" ID="{9E6A4826-1B32-4D82-BC00-59EAC8878B92}" ShortID="401253975">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="UI - Collect" ID="{788BFBA3-723C-454A-9BFD-F69AA82E8918}" WorkUnitID="{5660110C-1AB5-45A9-821C-531FBE825695}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_UI___error" ID="{96D6B72C-1B54-4737-B4CF-54C47001FB4A}">
+					<ChildrenList>
+						<Action Name="" ID="{31AD5854-59DB-4A55-ABC9-485B5B48A8F9}" ShortID="1071452572">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="UI - error" ID="{2485D95F-BB0D-4510-83FA-8F9705318E8E}" WorkUnitID="{5660110C-1AB5-45A9-821C-531FBE825695}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_bats_short" ID="{96F13EC8-BAED-4349-B24C-FDCC02499F8A}">
+					<ChildrenList>
+						<Action Name="" ID="{AFA2B81B-862D-40B5-8B0A-CD3A275CDAC7}" ShortID="237134086">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="bats short" ID="{F199BA0F-5143-4675-B15A-ECC6F70372ED}" WorkUnitID="{1E0FCF6E-5848-4FEC-9188-2250F1E16C69}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_flash_toggle" ID="{7ECD892C-9502-4094-AD07-DBC506CEBD19}">
+					<ChildrenList>
+						<Action Name="" ID="{F81AB536-5C8C-457E-8189-D42EFAC4EA96}" ShortID="997414631">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="flash toggle" ID="{2E829BF4-CBB2-4BEB-AA33-93D4A940A203}" WorkUnitID="{1E0FCF6E-5848-4FEC-9188-2250F1E16C69}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

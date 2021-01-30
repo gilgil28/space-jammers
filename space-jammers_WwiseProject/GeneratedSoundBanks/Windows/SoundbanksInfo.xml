@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="1508882078">
+		<SoundBank Id="3161908922" Language="SFX" Hash="763609090">
 			<ObjectPath>\SoundBanks\Default Work Unit\main</ObjectPath>
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
@@ -34,6 +34,22 @@
 						<File Id="887131215" Language="SFX">
 							<ShortName>AMB Outside (window).wav</ShortName>
 							<Path>SFX\AMB Outside (window)_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2355488257" Name="Play_bats_short" ObjectPath="\Events\Default Work Unit\Play_bats_short" DurationType="OneShot" DurationMin="2.713107" DurationMax="2.713107">
+					<IncludedMemoryFiles>
+						<File Id="23732042" Language="SFX">
+							<ShortName>bats short.wav</ShortName>
+							<Path>SFX\bats short_417D71D8.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="500080843" Name="Play_flash_toggle" ObjectPath="\Events\Default Work Unit\Play_flash_toggle" DurationType="OneShot" DurationMin="1.178413" DurationMax="1.178413">
+					<IncludedMemoryFiles>
+						<File Id="483532977" Language="SFX">
+							<ShortName>flash toggle.wav</ShortName>
+							<Path>SFX\flash toggle_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

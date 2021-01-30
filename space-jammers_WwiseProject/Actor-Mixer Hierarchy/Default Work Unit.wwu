@@ -231,6 +231,55 @@
 							</ChildrenList>
 						</RandomSequenceContainer>
 						<WorkUnit Name="sfx" ID="{5660110C-1AB5-45A9-821C-531FBE825695}" PersistMode="Reference"/>
+						<Sound Name="bats short" ID="{F199BA0F-5143-4675-B15A-ECC6F70372ED}" ShortID="669380891">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{75E10556-37B3-46AC-9CBA-D3966B24B001}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84637FEC-9B03-450C-8747-F7A8B753A917}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="bats short" ID="{13110383-475A-4248-BA55-9F052F85BE96}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="2.27124599205486"/>
+										<Property Name="FadeOutShape" Type="int16" Value="0"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>bats short.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="23732042"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="bats short" ID="{13110383-475A-4248-BA55-9F052F85BE96}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="flash toggle" ID="{2E829BF4-CBB2-4BEB-AA33-93D4A940A203}" ShortID="1038909542">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{75E10556-37B3-46AC-9CBA-D3966B24B001}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84637FEC-9B03-450C-8747-F7A8B753A917}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="flash toggle" ID="{4278C73C-69F6-4957-9393-B8AF60973FD7}">
+									<Language>SFX</Language>
+									<AudioFile>flash toggle.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="483532977"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="flash toggle" ID="{4278C73C-69F6-4957-9393-B8AF60973FD7}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>
