@@ -43,7 +43,7 @@ public class ThirdPersonCharacterControl : MonoBehaviour
             _anim.Play();
         }
 
-        var moving = !_elevating && hor != 0 || ver != 0;
+        var moving = hor != 0 || ver != 0;
         
         if (!_elevating && _allowJump && Input.GetKeyDown(KeyCode.Space))
         {
@@ -56,7 +56,7 @@ public class ThirdPersonCharacterControl : MonoBehaviour
                 return;
             }
         }
-        else if (moving)
+        else if (moving && !_elevating)
         {
             _movementTrigger.Trigger();
         }
