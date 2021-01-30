@@ -49,7 +49,11 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 74c75bc0daf24a40a59bfab715ef754c
     GuidInternal: 
+<<<<<<< Updated upstream
     m_lastTime: -8585895930366857635
+=======
+    m_lastTime: -8585895927322414290
+>>>>>>> Stashed changes
     List:
     - name: main
       guid: ee6921aa369b574896852f998bdbe7db
@@ -68,7 +72,11 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: ffc56a4868565c46a78b0f62cc25d38d
     GuidInternal: 
+<<<<<<< Updated upstream
     m_lastTime: -8585895930369476203
+=======
+    m_lastTime: -8585895927322444210
+>>>>>>> Stashed changes
     List:
     - name: Hands_pull
       guid: 69912c6c79e0b14e8a63618415635a25
@@ -80,8 +88,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Hands_pull
       maxAttenuation: 0
-      maxDuration: 1.42966
-      minDuration: 1.42966
+      maxDuration: -1
+      minDuration: -1
     - name: Play_AMB_Outside__window_
       guid: 12f7cd6fb1f24a4780246b4ef4842dee
       id: 2697204199
@@ -104,8 +112,13 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Play_bats_short
       maxAttenuation: 0
+<<<<<<< Updated upstream
       maxDuration: 2.713107
       minDuration: 2.713107
+=======
+      maxDuration: -1
+      minDuration: -1
+>>>>>>> Stashed changes
     - name: Play_flash_toggle
       guid: 2c89cd7e02959440ad07dbc506cebd19
       id: 500080843
@@ -116,8 +129,13 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Play_flash_toggle
       maxAttenuation: 0
+<<<<<<< Updated upstream
       maxDuration: 1.178413
       minDuration: 1.178413
+=======
+      maxDuration: -1
+      minDuration: -1
+>>>>>>> Stashed changes
     - name: Play_idle
       guid: 4d9d20cc87fcb340bf01890ddc61d132
       id: 41941568
@@ -128,8 +146,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Play_idle
       maxAttenuation: 0
-      maxDuration: 1.273152
-      minDuration: 1.273152
+      maxDuration: -1
+      minDuration: -1
     - name: Play_jumps
       guid: df846ef3946f6b42a011b9496e217427
       id: 827134157
@@ -140,8 +158,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Play_jumps
       maxAttenuation: 0
-      maxDuration: 2.427415
-      minDuration: 2.427415
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Room_tone
       guid: 9a3b3603cac92844bb1e7821d7f44cb3
       id: 2779585674
@@ -164,8 +182,13 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Play_UI___Collect
       maxAttenuation: 0
+<<<<<<< Updated upstream
       maxDuration: 0.22932
       minDuration: 0.22932
+=======
+      maxDuration: -1
+      minDuration: -1
+>>>>>>> Stashed changes
     - name: Play_UI___error
       guid: 2cb7d696541b3747b4cf54c47001fb4a
       id: 3622359025
@@ -176,8 +199,13 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Play_UI___error
       maxAttenuation: 0
+<<<<<<< Updated upstream
       maxDuration: 0.221383
       minDuration: 0.221383
+=======
+      maxDuration: -1
+      minDuration: -1
+>>>>>>> Stashed changes
     - name: run
       guid: c561e1c830037341bb456cd44717ac52
       id: 712161704
