@@ -2,11 +2,13 @@
 
 public abstract class AbilityItemController : MonoBehaviour
 {
+    [SerializeField] private CollectTrigger _collectTrigger;
+
     private void OnCollisionEnter(Collision other)
     {
         if (other.collider.CompareTag("Player"))
         {
-            Debug.Log("Found battery!");
+            _collectTrigger.Trigger();
             AddAbility(other.gameObject);
             Destroy(gameObject);
         }
