@@ -100,6 +100,137 @@
 								<ActiveSource Name="Room tone" ID="{2700E1DC-3933-4AD9-935D-F010AF6EAB66}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<RandomSequenceContainer Name="idle" ID="{79439F25-8B53-4750-9DE2-4010A36AEDC1}" ShortID="618435833">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{75E10556-37B3-46AC-9CBA-D3966B24B001}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84637FEC-9B03-450C-8747-F7A8B753A917}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="idle woopy2" ID="{861071C0-F677-4FBC-861C-1714707A270C}" ShortID="650418062">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{75E10556-37B3-46AC-9CBA-D3966B24B001}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84637FEC-9B03-450C-8747-F7A8B753A917}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="idle woopy2" ID="{0C1D35E9-286D-4907-AF17-BEE06BEBFC97}">
+											<Language>SFX</Language>
+											<AudioFile>idle woopy2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="827681397"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="idle woopy2" ID="{0C1D35E9-286D-4907-AF17-BEE06BEBFC97}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="idle woopy" ID="{5C2926F1-8AAE-4F99-949F-4B2A2C6878D0}" ShortID="392601678">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{75E10556-37B3-46AC-9CBA-D3966B24B001}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84637FEC-9B03-450C-8747-F7A8B753A917}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="idle woopy" ID="{E860DD51-A1EF-4097-B5AE-D99A014D18DC}">
+											<Language>SFX</Language>
+											<AudioFile>idle woopy.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="208519651"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="idle woopy" ID="{E860DD51-A1EF-4097-B5AE-D99A014D18DC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="jumps" ID="{22656535-4F43-4D74-8013-609F62053920}" ShortID="580369154">
+							<PropertyList>
+								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{75E10556-37B3-46AC-9CBA-D3966B24B001}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84637FEC-9B03-450C-8747-F7A8B753A917}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="jumps" ID="{700F4CE1-AA36-4835-92B4-3A9551283597}" ShortID="427163111">
+									<PropertyList>
+										<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{75E10556-37B3-46AC-9CBA-D3966B24B001}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84637FEC-9B03-450C-8747-F7A8B753A917}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="jump_nowoop" ID="{3DCCC48C-45DF-41F4-840F-0D6AFAC060C7}" ShortID="753167438">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{75E10556-37B3-46AC-9CBA-D3966B24B001}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84637FEC-9B03-450C-8747-F7A8B753A917}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="jump_nowoop" ID="{D35D0D68-0579-4D81-9A92-7929C0448678}">
+													<Language>SFX</Language>
+													<AudioFile>jump_nowoop.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="551400266"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="jump_nowoop" ID="{D35D0D68-0579-4D81-9A92-7929C0448678}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="jumpwoop" ID="{ED52ABA2-311F-48FC-8059-5F750B1DDA43}" ShortID="687954546">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{75E10556-37B3-46AC-9CBA-D3966B24B001}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84637FEC-9B03-450C-8747-F7A8B753A917}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="jumpwoop" ID="{261A1FB7-2BFA-4A45-B1BC-0A6C5EBFD02D}">
+													<Language>SFX</Language>
+													<AudioFile>jumpwoop.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="526081678"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="jumpwoop" ID="{261A1FB7-2BFA-4A45-B1BC-0A6C5EBFD02D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<WorkUnit Name="sfx" ID="{5660110C-1AB5-45A9-821C-531FBE825695}" PersistMode="Reference"/>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

@@ -5,13 +5,6 @@
 			<ChildrenList>
 				<Event Name="walk" ID="{4DCBA66C-BF73-45D6-B4F8-90567AAA1DC9}">
 					<ChildrenList>
-						<Action Name="" ID="{F9C81D28-44E6-49F9-B06A-DA4B397957A1}" ShortID="57240571">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Drilling 1" ID="{AC0AAF45-5C7F-426E-AE55-AB2CB35CA8A4}" WorkUnitID="{0F1B466E-96DB-4B20-9E15-3FDD10BC1187}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
 						<Action Name="" ID="{6B13DB46-005B-49C1-AB4C-0D6E0B1171D6}" ShortID="219529376">
 							<ReferenceList>
 								<Reference Name="Target">
@@ -102,6 +95,28 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Room tone" ID="{58D7A283-C466-4368-868D-2F33C89C3CE8}" WorkUnitID="{1E0FCF6E-5848-4FEC-9188-2250F1E16C69}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_idle" ID="{CC209D4D-FC87-40B3-BF01-890DDC61D132}">
+					<ChildrenList>
+						<Action Name="" ID="{4AD1F777-679D-455B-B158-CAC846445E0A}" ShortID="326629865">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="idle" ID="{79439F25-8B53-4750-9DE2-4010A36AEDC1}" WorkUnitID="{1E0FCF6E-5848-4FEC-9188-2250F1E16C69}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_jumps" ID="{F36E84DF-6F94-426B-A011-B9496E217427}">
+					<ChildrenList>
+						<Action Name="" ID="{C7538F14-48F1-4488-8FF0-9720FEA5A51B}" ShortID="727188614">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="jumps" ID="{700F4CE1-AA36-4835-92B4-3A9551283597}" WorkUnitID="{1E0FCF6E-5848-4FEC-9188-2250F1E16C69}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
