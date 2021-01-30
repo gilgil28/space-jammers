@@ -9,6 +9,8 @@ public class ThirdPersonCharacterControl : MonoBehaviour
     [SerializeField] private bool _allowJump = true;
     [SerializeField] private float _jumpTime = 2f;
 
+    private Animator _animator;
+
     private int _touchingColliders;
     
     private Rigidbody _rigidBody;
@@ -17,6 +19,7 @@ public class ThirdPersonCharacterControl : MonoBehaviour
     private void Awake()
     {
         _rigidBody = GetComponent<Rigidbody>();
+        _animator = GetComponent<Animator>();
     }
 
     private void FixedUpdate ()
@@ -70,6 +73,8 @@ public class ThirdPersonCharacterControl : MonoBehaviour
         velocityChange.z = Mathf.Clamp(velocityChange.z, -10, 10);
         velocityChange.y = 0;
         _rigidBody.AddForce(velocityChange, ForceMode.VelocityChange);
+
+        _animator.SetFloat("speed", Mathf.Abs(velocity.magnitude));
     }
 
     private void ActivateLight()
