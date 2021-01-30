@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="2896221380">
+		<SoundBank Id="3161908922" Language="SFX" Hash="1508882078">
 			<ObjectPath>\SoundBanks\Default Work Unit\main</ObjectPath>
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
@@ -69,6 +69,22 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="1416566061" Name="Play_UI___Collect" ObjectPath="\Events\Default Work Unit\Play_UI___Collect" DurationType="OneShot" DurationMin="0.229320" DurationMax="0.229320">
+					<IncludedMemoryFiles>
+						<File Id="561703834" Language="SFX">
+							<ShortName>UI - Collect.wav</ShortName>
+							<Path>SFX\UI - Collect_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3622359025" Name="Play_UI___error" ObjectPath="\Events\Default Work Unit\Play_UI___error" DurationType="OneShot" DurationMin="0.221383" DurationMax="0.221383">
+					<IncludedMemoryFiles>
+						<File Id="985073005" Language="SFX">
+							<ShortName>UI - error.wav</ShortName>
+							<Path>SFX\UI - error_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="2108779966" Name="walk" ObjectPath="\Events\Default Work Unit\walk" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="448159237" Language="SFX">
@@ -85,7 +101,7 @@
 						</File>
 						<File Id="1041702873" Language="SFX">
 							<ShortName>Drilling 1.wav</ShortName>
-							<Path>SFX\Drilling 1_F878A34F.wem</Path>
+							<Path>SFX\Drilling 1_CAAA9C9B.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

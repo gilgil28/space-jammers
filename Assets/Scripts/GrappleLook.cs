@@ -14,6 +14,16 @@ public class GrappleLook : MonoBehaviour
         Attached
     }
 
+    enum GrappleOption
+    {
+        None,
+        CanGrapple,
+        CannotGrapple
+    }
+
+    private const float GRAPPLE_RADIUS_LENGTH = 7f;
+    private const float GRAPPLE_MAX_HEIGHT_DIFF = 4;
+
     private bool mIsGrappling;
     private Vector3 mScreenCenter;
 
@@ -45,7 +55,7 @@ public class GrappleLook : MonoBehaviour
         //Reset the last cached markerd object to it's original color
         if (mMarkedObject != null)
         {
-            mMarkedObject.GetComponent<Renderer>().material.color = Color.white;
+            HighlightObject(mMarkedObject, GrappleOption.None);
             mMarkedObject = null;
         }
         Ray ray = Camera.main.ScreenPointToRay(mScreenCenter);
@@ -76,17 +86,25 @@ public class GrappleLook : MonoBehaviour
                 //Calculate object distance to decide of grapple is possible
                 float dist = Vector3.Distance(grapPosition, mPlayerBody.position);
 
-                if (dist < 25)
+                float y_diff = Mathf.Abs(landingPosition.y - transform.position.y);
+
+                Debug.Log("y_diff: " + y_diff);
+                Debug.Log("dist: " + dist);
+
+                if (dist < GRAPPLE_RADIUS_LENGTH && y_diff < GRAPPLE_MAX_HEIGHT_DIFF && grappleObject.GetGrappleType() != GrappleType.None)
                 {
                     mMarkedObject = hitCollider;
 
                     //Mark the object as grappable
-                    mMarkedObject.GetComponent<Renderer>().material.color = Color.green;
+                    HighlightObject(mMarkedObject, GrappleOption.CanGrapple);
+                    
 
                     //If left mouse button is pressed Initiate grapple
                     if (Input.GetMouseButtonDown(0))
                     {
                         mGrappleState = GrappleState.Shot;
+
+                        grappleObject.OnGrapped();
 
                         RotateHandToPoint(mHandR, grapPosition);
                         RotateHandToPoint(mHandL, grapPosition);
@@ -167,8 +185,29 @@ public class GrappleLook : MonoBehaviour
                     mMarkedObject = hit.collider.gameObject;
 
                     //Mark the object as grappable
-                    mMarkedObject.GetComponent<Renderer>().material.color = Color.red;
+                    HighlightObject(mMarkedObject, GrappleOption.CannotGrapple);
                 }
+            }
+        }
+    }
+
+    private void HighlightObject(GameObject mMarkedObject, GrappleOption option)
+    {
+        Renderer renderer = mMarkedObject.GetComponent<Renderer>();
+        if (renderer)
+        {
+            switch (option)
+            {
+                case GrappleOption.None:
+                    renderer.material.color = Color.white;
+                    break;
+                case GrappleOption.CanGrapple:
+                    renderer.material.color = Color.green;
+                    break;
+                case GrappleOption.CannotGrapple:
+                    renderer.material.color = Color.red;
+                    break;
+
             }
         }
     }
