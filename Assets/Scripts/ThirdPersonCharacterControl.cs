@@ -10,7 +10,8 @@ public class ThirdPersonCharacterControl : MonoBehaviour
     [SerializeField] private float _jumpTime = 2f;
 
     [SerializeField] private MovementTrigger _movementTrigger;
-    [SerializeField] private HandsTrigger _handsTrigger;
+    [SerializeField] private IdleTrigger _idleTrigger;
+    [SerializeField] private JumpTrigger _jumpTrigger;
 
     private Animator _animator;
     private Animation _anim;
@@ -42,20 +43,20 @@ public class ThirdPersonCharacterControl : MonoBehaviour
             _anim.Play();
         }
 
-        var moving = !_elevating && hor != 0 || ver != 0;
+        var moving = hor != 0 || ver != 0;
         
         if (!_elevating && _allowJump && Input.GetKeyDown(KeyCode.Space))
         {
             if (_touchingColliders > 0)
             {
                 _elevating = true;
-                _handsTrigger.Trigger();
+                _jumpTrigger.Trigger();
                 StartCoroutine(ExtentArms());
                 _movementTrigger.Stop();
                 return;
             }
         }
-        else if (moving)
+        else if (moving && !_elevating)
         {
             _movementTrigger.Trigger();
         }
@@ -93,7 +94,7 @@ public class ThirdPersonCharacterControl : MonoBehaviour
             yield return null;
         }
         _rigidBody.AddForce(transform.forward * 15, ForceMode.Impulse);
-        _handsTrigger.Stop();
+        _jumpTrigger.Stop();
         _elevating = false;
     }
 

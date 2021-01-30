@@ -1,8 +1,6 @@
 ﻿using Assets.Scripts;
 using DG.Tweening;
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GrappleLook : MonoBehaviour
@@ -39,6 +37,9 @@ public class GrappleLook : MonoBehaviour
     [SerializeField] Transform mHandL;
 
     [SerializeField] Transform mPlayerBody;
+    
+    [SerializeField] private HandsTrigger _handsTrigger;
+
     private float _yAngle;
 
     private void Start()
@@ -124,19 +125,22 @@ public class GrappleLook : MonoBehaviour
                             switch (type)
                             {
                                 case GrappleType.None:
+                                    _handsTrigger.Trigger();
                                     mHandL.DOScaleX(1, .5f);
                                     mHandR.DOScaleX(1, .5f).OnComplete(() =>
                                     {
                                         FinishGrappling();
+                                        _handsTrigger.Stop();
                                     });
                                     break;
                                 case GrappleType.Heavy:
                                     //dotween to the wanted position
                                     ResetHandsScale();
-
+                                    _handsTrigger.Trigger();
                                     mPlayerBody.DOMove(landingPosition, .5f).SetEase(Ease.OutQuad).OnComplete(() =>
                                     {
                                         FinishGrappling();
+                                        _handsTrigger.Stop();
                                     });
                                     break;
 
@@ -146,10 +150,12 @@ public class GrappleLook : MonoBehaviour
 
                                     var colliderTransform = hit.collider.gameObject.transform;
                                     var dest = mPlayerBody.position + mPlayerBody.forward * 2;
+                                    _handsTrigger.Trigger();
                                     colliderTransform.DOMove(new Vector3(dest.x, colliderTransform.position.y, dest.z), .5f)
                                     .OnComplete(() =>
                                     {
                                         FinishGrappling();
+                                        _handsTrigger.Stop();
                                     });
                                     break;
 
@@ -169,10 +175,12 @@ public class GrappleLook : MonoBehaviour
                                     }
                                     anim.SetTrigger("Hit");
 
+                                    _handsTrigger.Trigger();
                                     mHandL.DOScaleX(1, .5f);
                                     mHandR.DOScaleX(1, .5f).OnComplete(() =>
                                     {
                                         FinishGrappling();
+                                        _handsTrigger.Stop();
                                     });
                                     break;
                             }
