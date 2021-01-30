@@ -36,5 +36,15 @@ namespace Assets.Scripts
 
             return mPredefinedLandingPoint.position;
         }
+
+        public void SetType(GrappleType type)
+        {
+            mGrappleType = type;
+        }
+
+        public virtual void OnGrapped()
+        {
+
+        }
     }
 }
