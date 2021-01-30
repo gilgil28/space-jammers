@@ -1,16 +1,11 @@
 ﻿using UnityEngine;
 
-public class BatteryItemController : MonoBehaviour
+public class BatteryItemController : AbilityItemController
 {
-    private void OnCollisionEnter(Collision other)
+    protected override void AddAbility(GameObject other)
     {
-        if (other.collider.CompareTag("Player"))
-        {
-            Debug.Log("Found battery!");
-            var flashlightController = other.gameObject.AddComponent<FlashlightAbilityController>();
-            var flashlight = other.transform.Find("Flashlight").gameObject;
-            flashlightController.SetFlashlightGameObject(flashlight);
-            Destroy(gameObject);
-        }
+        var flashlightController = other.gameObject.AddComponent<FlashlightAbilityController>();
+        var flashlight = other.transform.Find("Flashlight").gameObject;
+        flashlightController.SetFlashlightGameObject(flashlight);
     }
 }
