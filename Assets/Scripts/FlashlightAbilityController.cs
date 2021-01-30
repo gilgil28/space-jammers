@@ -1,8 +1,24 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Diagnostics;
+using UnityEngine;
 
 public class FlashlightAbilityController : MonoBehaviour
 {
     private GameObject _flashlight;
+
+    public static FlashlightAbilityController Instance;
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     private void Update()
     {
@@ -16,4 +32,10 @@ public class FlashlightAbilityController : MonoBehaviour
     {
         _flashlight = flashlight;
     }
+
+    public bool IsActive()
+    {
+        return _flashlight.activeSelf;
+    }
+
 }
