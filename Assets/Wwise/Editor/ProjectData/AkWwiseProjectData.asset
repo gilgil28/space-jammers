@@ -49,7 +49,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 74c75bc0daf24a40a59bfab715ef754c
     GuidInternal: 
-    m_lastTime: -8585896535874887846
+    m_lastTime: -8585896416981234586
     List:
     - name: main
       guid: ee6921aa369b574896852f998bdbe7db
@@ -68,7 +68,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: ffc56a4868565c46a78b0f62cc25d38d
     GuidInternal: 
-    m_lastTime: -8585896535875027478
+    m_lastTime: -8585896416985941167
     List:
     - name: Hands_pull
       guid: 69912c6c79e0b14e8a63618415635a25
@@ -94,6 +94,30 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_idle
+      guid: 4d9d20cc87fcb340bf01890ddc61d132
+      id: 41941568
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_idle
+        ObjectType: 3
+      Path: Default Work Unit\Play_idle
+      maxAttenuation: 0
+      maxDuration: 1.273152
+      minDuration: 1.273152
+    - name: Play_jumps
+      guid: df846ef3946f6b42a011b9496e217427
+      id: 827134157
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_jumps
+        ObjectType: 3
+      Path: Default Work Unit\Play_jumps
+      maxAttenuation: 0
+      maxDuration: 2.427415
+      minDuration: 2.427415
     - name: Play_Room_tone
       guid: 9a3b3603cac92844bb1e7821d7f44cb3
       id: 2779585674
