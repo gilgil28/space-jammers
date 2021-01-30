@@ -37,15 +37,15 @@ public class ThirdPersonCharacterControl : MonoBehaviour
         var hor = Input.GetAxis("Horizontal");
         var ver = Input.GetAxis("Vertical");
 
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            _anim.clip = _anim.GetClip("startWalk");
-            _anim.Play();
-        }
+        // if (Input.GetKeyDown(KeyCode.L))
+        // {
+        //     _anim.clip = _anim.GetClip("startWalk");
+        //     _anim.Play();
+        // }
 
         var moving = hor != 0 || ver != 0;
         
-        if (!_elevating && _allowJump && Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             if (_touchingColliders > 0)
             {

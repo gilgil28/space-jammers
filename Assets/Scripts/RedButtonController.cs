@@ -22,7 +22,8 @@ public class RedButtonController : MonoBehaviour
         if (FlashlightAbilityController.Instance.IsActive())
         {
             var distance = Vector3.Distance(mPlayer.transform.position, transform.position);
-            if (distance < 1)
+            Debug.Log(distance);
+            if (distance < 3)
             {
                 mBats.SetActive(true);
                 _hasReacted = true;
