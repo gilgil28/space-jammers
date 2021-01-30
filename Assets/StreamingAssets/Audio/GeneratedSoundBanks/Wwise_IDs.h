@@ -18,6 +18,8 @@ namespace AK
         static const AkUniqueID PLAY_IDLE = 41941568U;
         static const AkUniqueID PLAY_JUMPS = 827134157U;
         static const AkUniqueID PLAY_ROOM_TONE = 2779585674U;
+        static const AkUniqueID PLAY_UI___COLLECT = 1416566061U;
+        static const AkUniqueID PLAY_UI___ERROR = 3622359025U;
         static const AkUniqueID WALK = 2108779966U;
     } // namespace EVENTS
 
