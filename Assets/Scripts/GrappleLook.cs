@@ -40,6 +40,8 @@ public class GrappleLook : MonoBehaviour
     
     [SerializeField] private HandsTrigger _handsTrigger;
 
+    private Animator mAnimator;
+
     private float _yAngle;
 
     private void Start()
@@ -49,6 +51,7 @@ public class GrappleLook : MonoBehaviour
         mScreenCenter =  new Vector3(Screen.width / 2, Screen.height / 2, 0); 
         mMarkedObject = null;
         mGrappleState = GrappleState.Idle;
+        mAnimator = GetComponentInChildren<Animator>();
     }
 
     void Update()
@@ -107,6 +110,8 @@ public class GrappleLook : MonoBehaviour
 
                         grappleObject.OnGrapped();
 
+                        mAnimator.enabled = false;
+
                         RotateHandToPoint(mHandR, grapPosition);
                         RotateHandToPoint(mHandL, grapPosition);
 
@@ -114,6 +119,7 @@ public class GrappleLook : MonoBehaviour
                         mHandR.DOScaleX(dist, .5f).OnComplete(() =>
                         {
                             mIsGrappling = true;
+
 
                             mGrappleState = GrappleState.Attached;
                             mAttachedPosition = topCenter;
@@ -232,6 +238,7 @@ public class GrappleLook : MonoBehaviour
         mHandR.Rotate(0, -_yAngle, 0, Space.Self);
         mHandL.Rotate(0, -_yAngle, 0, Space.Self);
         Debug.Log(mHandL_defaultRotation.eulerAngles);
+        mAnimator.enabled = true;
     }
 
     private void RotateHandToPoint(Transform hand, Vector3 position)
