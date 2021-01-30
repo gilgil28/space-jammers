@@ -9,13 +9,16 @@ public class ThirdPersonCharacterControl : MonoBehaviour
     [SerializeField] private bool _allowJump = true;
     [SerializeField] private float _jumpTime = 2f;
 
+    [SerializeField] private MovementTrigger _movementTrigger;
+    [SerializeField] private HandsTrigger _handsTrigger;
+
     private Animator _animator;
     private Animation _anim;
 
     private int _touchingColliders;
     
     private Rigidbody _rigidBody;
-    private bool _hasLight;
+    private bool _elevating;
 
     private void Awake()
     {
@@ -30,13 +33,8 @@ public class ThirdPersonCharacterControl : MonoBehaviour
 
     private void PlayerMovement()
     {
-        if (Input.GetKeyDown(KeyCode.LeftAlt))
-        {
-            ActivateLight();
-        }
         var hor = Input.GetAxis("Horizontal");
         var ver = Input.GetAxis("Vertical");
-        var run = Input.GetKey(KeyCode.LeftShift) ? 2 : 1;
 
         if (Input.GetKeyDown(KeyCode.L))
         {
@@ -44,27 +42,26 @@ public class ThirdPersonCharacterControl : MonoBehaviour
             _anim.Play();
         }
 
-        var moving = hor != 0 || ver != 0;
-
-        var movementTrigger = GetComponent<MovementTrigger>();
-
-        if (_allowJump && Input.GetKeyDown(KeyCode.Space))
+        var moving = !_elevating && hor != 0 || ver != 0;
+        
+        if (!_elevating && _allowJump && Input.GetKeyDown(KeyCode.Space))
         {
             if (_touchingColliders > 0)
             {
+                _elevating = true;
+                _handsTrigger.Trigger();
                 StartCoroutine(ExtentArms());
-                movementTrigger.Stop(); //play something else?
+                _movementTrigger.Stop();
                 return;
-                // _rigidBody.AddForce(0, 1, 0, ForceMode.Impulse);
             }
         }
         else if (moving)
         {
-            movementTrigger.Trigger();
+            _movementTrigger.Trigger();
         }
         else
         {
-            movementTrigger.Stop();
+            _movementTrigger.Stop();
         }
         
         // Calculate how fast we should be moving
@@ -84,15 +81,6 @@ public class ThirdPersonCharacterControl : MonoBehaviour
         _animator.SetFloat("speed", Mathf.Abs(velocity.magnitude));
     }
 
-    private void ActivateLight()
-    {
-        if (!_hasLight)
-        {
-            return;
-        }
-        //TODO turn on/off light GameObject
-    }
-
     private IEnumerator ExtentArms()
     {
         var start = transform.position;
@@ -105,6 +93,8 @@ public class ThirdPersonCharacterControl : MonoBehaviour
             yield return null;
         }
         _rigidBody.AddForce(transform.forward * 15, ForceMode.Impulse);
+        _handsTrigger.Stop();
+        _elevating = false;
     }
 
     private void OnCollisionEnter ()
