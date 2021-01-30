@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: d1c3109bdb54ad54c8a2b2838528e640
+  - enabled: 1
+    path: Assets/Scenes/WhiteBoxing Scene.unity
+    guid: 24ba2a680b15e9c40b8ee29718090be3
   m_configObjects: {}
