@@ -21,8 +21,8 @@ public class GrappleLook : MonoBehaviour
         CannotGrapple
     }
 
-    private const float GRAPPLE_RADIUS_LENGTH = 7f;
-    private const float GRAPPLE_MAX_HEIGHT_DIFF = 4;
+    private const float GRAPPLE_RADIUS_LENGTH = 7.5f;
+    private const float GRAPPLE_MAX_HEIGHT_DIFF = 4.3f;
 
     private bool mIsGrappling;
     private Vector3 mScreenCenter;
