@@ -1370,6 +1370,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mGrappleType: 0
   mPredefinedLandingPoint: {fileID: 0}
+--- !u!1 &415182653 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7391517739372327491, guid: 44ad6d0414f995f4cb0c2ae58540016b,
+    type: 3}
+  m_PrefabInstance: {fileID: 7391517739059066275}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &415182662
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 415182653}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ecbf9156f6013c748b798865d041c04c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &472295621
 GameObject:
   m_ObjectHideFlags: 0
@@ -11206,6 +11231,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8359659662509609298, guid: 44ad6d0414f995f4cb0c2ae58540016b,
+        type: 3}
+      propertyPath: LargeModePositions.Array.size
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44ad6d0414f995f4cb0c2ae58540016b, type: 3}
